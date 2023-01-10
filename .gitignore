@@ -1,0 +1,64 @@
+#     --------------------------------
+# GitIgnore file for all Zielino's projects
+#     --------------------------------
+
+# Node Modules
+node_modules/
+
+# Nuxt folder
+.nuxt/
+
+.nitro/
+
+# Python cache
+__pycache__/
+
+# Cache
+.cache/
+
+# Lock files
+*.lock
+package-lock.json
+
+# .vscode folder
+.vscode/
+
+# .idea folder
+.idea/
+
+# Data folder
+data/
+
+# Databases
+*.sqlite
+*.db
+
+# Configs
+config.*
+
+# ENV files
+*.env
+
+# Temp files
+temp.*
+
+# Logs
+logs/
+*.log
+
+# Build folders
+dist/
+build/
+target/
+bin/
+obj/
+
+.output/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Images
+images/
