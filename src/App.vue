@@ -1,5 +1,7 @@
+<script lang="ts" setup>
+import AppLayout from './components/AppLayout.vue';
+</script>
+
 <template>
-  <div class="font-rowdies">
-    <h1 class="text-xl">Hello, World!</h1>
-  </div>
+  <AppLayout />
 </template>
