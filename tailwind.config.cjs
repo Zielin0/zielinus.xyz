@@ -7,6 +7,7 @@ module.exports = {
       roboto: ['Roboto', 'sans-serif'],
     },
     colors: {
+      transparent: 'transparent',
       white: '#DEDEDE',
       'white-second': '#DFDFDF',
       'pure-white': '#FFFFFF',
@@ -20,7 +21,21 @@ module.exports = {
       blue: '#3168AF',
       green: '#31AF98',
     },
-    extend: {},
+    extend: {
+      animation: {
+        horizontal: 'horizontal 4s ease-in-out infinite',
+      },
+      keyframes: {
+        horizontal: {
+          '0%, 100%': {
+            'background-position': '0 0',
+          },
+          '50%': {
+            'background-position': '100% 0',
+          },
+        },
+      },
+    },
   },
   plugins: [],
 };
