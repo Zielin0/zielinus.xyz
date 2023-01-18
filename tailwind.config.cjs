@@ -12,7 +12,7 @@ module.exports = {
       'white-second': '#DFDFDF',
       'pure-white': '#FFFFFF',
       'white-gray': '#999999',
-      'light-gray': '#2D2D2D',
+      'light-gray': '#2c2c2c',
       'dark-gray': '#202020',
       comment: '#ADADAD',
       pink: '#AA1BAD',
