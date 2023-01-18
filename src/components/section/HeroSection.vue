@@ -3,5 +3,5 @@ import ColoredText from '../text/ColoredText.vue';
 </script>
 
 <template>
-  <h1>Hello, <ColoredText>World</ColoredText>!</h1>
+  <h1 class="text-4xl">Hello! I am <ColoredText>Zielino</ColoredText></h1>
 </template>

@@ -23,7 +23,7 @@ module.exports = {
     },
     extend: {
       animation: {
-        horizontal: 'horizontal 4s ease-in-out infinite',
+        horizontal: 'horizontal 5s ease-in-out infinite',
       },
       keyframes: {
         horizontal: {
