@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import ColoredText from '../text/ColoredText.vue';
+import ColoredText from '../ColoredText.vue';
 </script>
 
 <template>
