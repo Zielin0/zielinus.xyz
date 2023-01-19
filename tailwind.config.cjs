@@ -24,6 +24,7 @@ module.exports = {
     extend: {
       animation: {
         horizontal: 'horizontal 5s ease-in-out infinite',
+        'horizontal-speed': 'horizontal 3s ease infinite',
       },
       keyframes: {
         horizontal: {
