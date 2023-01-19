@@ -1,14 +1,28 @@
-<!-- @TODO: Add option for only border button for 'About Me' -->
-
 <script lang="ts" setup>
-defineProps(['targetId']);
+defineProps({
+  targetId: {
+    type: String,
+    default: '#',
+  },
+  secondary: Boolean,
+});
 </script>
 
 <template>
   <a
-    class="bg-gradient-to-r from-pink to-purple rounded px-5 py-3 text-2xl text-center"
+    v-if="!secondary"
+    class="bg-gradient-to-r from-pink to-purple rounded px-5 py-3 text-2xl text-center text-pure-white"
     :href="targetId"
   >
     <slot />
+  </a>
+  <a
+    v-else
+    class="bg-gradient-to-r from-pink to-purple rounded px-1 py-3 text-2xl text-center text-pure-white"
+    :href="targetId"
+  >
+    <span class="bg-light-gray rounded px-3 py-2">
+      <slot />
+    </span>
   </a>
 </template>
