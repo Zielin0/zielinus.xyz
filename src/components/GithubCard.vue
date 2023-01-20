@@ -57,6 +57,18 @@ defineProps({
         {{ description }}
       </h2>
     </div>
-    <!-- @TODO: Icons here -->
+    <div class="flex font-light pl-6 pt-7 justify-between max-w-[14rem]">
+      <span>
+        <i class="fa-regular fa-star pr-1 text-yellow" />{{ stars }}
+      </span>
+      <span> <i class="fa-solid fa-user-group pr-1" />{{ contributors }}</span>
+      <span>
+        <i class="fa-solid fa-circle-exclamation pr-1" />{{ issues }}
+      </span>
+      <span><i class="fa-solid fa-code-fork pr-1" />{{ forks }}</span>
+    </div>
+    <h2 class="text-md font-roboto font-normal pl-6 pt-1">
+      Language:&nbsp;<span class="font-rowdies font-bold">{{ language }}</span>
+    </h2>
   </div>
 </template>
