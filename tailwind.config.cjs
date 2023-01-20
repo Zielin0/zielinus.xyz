@@ -20,6 +20,7 @@ module.exports = {
       'dark-blue': '#561BAD',
       blue: '#3168AF',
       green: '#31AF98',
+      yellow: '#E0D428',
     },
     extend: {
       animation: {
