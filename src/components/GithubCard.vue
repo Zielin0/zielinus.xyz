@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import LinkComponent from './LinkComponent.vue';
+
 defineProps({
   title: {
     type: String,
@@ -41,16 +43,27 @@ defineProps({
     class="bg-dark-gray w-[24rem] h-[11rem] text-left rounded drop-shadow-lg"
   >
     <div class="flex justify-between">
-      <h1 class="font-roboto text-2xl pl-6 pt-5">
-        {{ title.split('/')[0] }}/<span class="font-bold">{{
-          title.split('/')[1]
-        }}</span>
-      </h1>
-      <img
-        :src="iconURL"
-        alt="Repo Icon"
-        class="w-16 h-16 rounded-md mr-6 mt-4"
-      />
+      <LinkComponent
+        class="hover:underline"
+        :href="`https://github.com/${title}`"
+        external
+      >
+        <h1 class="font-roboto text-2xl pl-6 pt-5">
+          {{ title.split('/')[0] }}/<span class="font-bold">{{
+            title.split('/')[1]
+          }}</span>
+        </h1>
+      </LinkComponent>
+      <LinkComponent
+        :href="`https://github.com/${title.split('/')[0]}`"
+        external
+      >
+        <img
+          :src="iconURL"
+          alt="Repo Icon"
+          class="w-16 h-16 rounded-md mr-6 mt-4"
+        />
+      </LinkComponent>
     </div>
     <div class="max-w-[16rem] break-words">
       <h2 class="text-sm font-light pl-6 mt-[-1rem]">
@@ -58,13 +71,17 @@ defineProps({
       </h2>
     </div>
     <div class="flex font-light pl-6 pt-7 justify-between max-w-[14rem]">
-      <span>
-        <i class="fa-regular fa-star pr-1 text-yellow" />{{ stars }}
-      </span>
+      <LinkComponent :href="`https://github.com/${title}/stargazers`" external>
+        <span>
+          <i class="fa-regular fa-star pr-1 text-yellow" />{{ stars }}
+        </span>
+      </LinkComponent>
       <span> <i class="fa-solid fa-user-group pr-1" />{{ contributors }}</span>
-      <span>
-        <i class="fa-solid fa-circle-exclamation pr-1" />{{ issues }}
-      </span>
+      <LinkComponent :href="`https://github.com/${title}/issues`" external>
+        <span>
+          <i class="fa-solid fa-circle-exclamation pr-1" />{{ issues }}
+        </span>
+      </LinkComponent>
       <span><i class="fa-solid fa-code-fork pr-1" />{{ forks }}</span>
     </div>
     <h2 class="text-md font-roboto font-normal pl-6 pt-1">
