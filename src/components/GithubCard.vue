@@ -22,10 +22,6 @@ defineProps({
     type: Number,
     default: 3,
   },
-  contributors: {
-    type: Number,
-    default: 2,
-  },
   issues: {
     type: Number,
     default: 4,
@@ -37,10 +33,9 @@ defineProps({
 });
 </script>
 
-<!-- @TODO: Wrap h1 tag with title in Link component! -->
 <template>
   <div
-    class="bg-dark-gray w-[24rem] h-[11rem] text-left rounded drop-shadow-lg"
+    class="bg-dark-gray w-[25rem] h-[11rem] text-left rounded drop-shadow-lg"
   >
     <div class="flex justify-between">
       <LinkComponent
@@ -65,18 +60,17 @@ defineProps({
         />
       </LinkComponent>
     </div>
-    <div class="max-w-[16rem] break-words">
+    <div class="max-w-[18rem] break-words">
       <h2 class="text-sm font-light pl-6 mt-[-1rem]">
         {{ description }}
       </h2>
     </div>
-    <div class="flex font-light pl-6 pt-7 justify-between max-w-[14rem]">
+    <div class="flex font-light pl-6 pt-7 justify-between max-w-[10rem]">
       <LinkComponent :href="`https://github.com/${title}/stargazers`" external>
         <span>
           <i class="fa-regular fa-star pr-1 text-yellow" />{{ stars }}
         </span>
       </LinkComponent>
-      <span> <i class="fa-solid fa-user-group pr-1" />{{ contributors }}</span>
       <LinkComponent :href="`https://github.com/${title}/issues`" external>
         <span>
           <i class="fa-solid fa-circle-exclamation pr-1" />{{ issues }}
@@ -85,7 +79,9 @@ defineProps({
       <span><i class="fa-solid fa-code-fork pr-1" />{{ forks }}</span>
     </div>
     <h2 class="text-md font-roboto font-normal pl-6 pt-1">
-      Language:&nbsp;<span class="font-rowdies font-bold">{{ language }}</span>
+      Language:&nbsp;<span class="font-rowdies font-normal">{{
+        language
+      }}</span>
     </h2>
   </div>
 </template>
