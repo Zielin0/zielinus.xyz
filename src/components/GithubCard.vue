@@ -35,7 +35,7 @@ defineProps({
 
 <template>
   <div
-    class="bg-dark-gray w-[25rem] h-[11rem] text-left rounded drop-shadow-lg"
+    class="bg-dark-gray w-[24rem] h-[11rem] text-left rounded drop-shadow-lg"
   >
     <div class="flex justify-between">
       <LinkComponent
