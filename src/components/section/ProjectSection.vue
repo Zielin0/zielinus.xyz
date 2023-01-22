@@ -15,10 +15,10 @@ const repoLinks = [
   'Zielin0/mech',
 ];
 
-repoLinks.forEach((repo) => {
+repoLinks.forEach(async (repo) => {
   const owner = repo.split('/')[0];
   const name = repo.split('/')[1];
-  getRepo(owner, name).then((data) => {
+  await getRepo(owner, name).then((data) => {
     repos.value.push(data);
   });
 });
