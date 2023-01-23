@@ -3,20 +3,24 @@ import AboutComponent from '../AboutComponent.vue';
 
 const aboutList = [
   {
-    question: 'Very very very long question?',
-    answer: 'Not so long answer.',
+    question: 'Text Editor or IDE?',
+    answer: 'Visual Studio Code with some extensions and tweaks.',
   },
   {
-    question: 'Very very very long question?',
-    answer: 'Not so long answer.',
+    question: 'What Programming Languages do You use?',
+    answer: 'Mostly TypeScript, Go, and Vue.',
   },
   {
-    question: 'Very very very long question?',
-    answer: 'Not so long answer.',
+    question: 'How long have You been programming?',
+    answer: 'I started programming in March 2020.',
   },
   {
-    question: 'Very very very long question?',
-    answer: 'Not so long answer.',
+    question: 'Dotfiles or Terminal Config?',
+    answer: "I'm using Windows Terminal (PowerShell 7.3) with starship.rs",
+  },
+  {
+    question: 'How old are You?',
+    answer: 'I was born 2 years after Poland joined the EU.',
   },
 ];
 </script>

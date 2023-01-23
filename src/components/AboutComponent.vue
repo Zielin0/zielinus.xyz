@@ -12,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="text-left py-3 lg:py-4">
+  <div class="text-left py-3 lg:py-4 pl-4 lg:pl-0">
     <h1
       class="text-2xl lg:text-3xl font-roboto font-semibold italic pb-1 lg:pb-2"
     >
