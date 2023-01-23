@@ -31,7 +31,7 @@ repoLinks.forEach(async (repo) => {
       class="mt-12 grid grid-rows-4 lg:grid-rows-2 grid-flow-col gap-5 lg:gap-16"
     >
       <GithubCard
-        v-for="repo in repos"
+        v-for="repo of repos"
         v-bind:key="repo.name"
         :title="repo.full_name"
         :description="repo.description"
