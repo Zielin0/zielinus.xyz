@@ -76,7 +76,9 @@ defineProps({
           <i class="fa-solid fa-circle-exclamation pr-1" />{{ issues }}
         </span>
       </LinkComponent>
-      <span><i class="fa-solid fa-code-fork pr-1" />{{ forks }}</span>
+      <LinkComponent :href="`https://github.com/${title}/fork`" external>
+        <span><i class="fa-solid fa-code-fork pr-1" />{{ forks }}</span>
+      </LinkComponent>
     </div>
     <h2 class="text-md font-roboto font-normal pl-6 pt-1">
       Language:&nbsp;<span class="font-rowdies font-normal">{{
