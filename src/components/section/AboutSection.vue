@@ -4,11 +4,11 @@ import AboutComponent from '../AboutComponent.vue';
 const aboutList = [
   {
     question: 'Text Editor or IDE?',
-    answer: 'Visual Studio Code with some extensions and tweaks.',
+    answer: 'VSCode with some extensions or IntelliJ.',
   },
   {
     question: 'What Programming Languages do You use?',
-    answer: 'Mostly TypeScript, Go, and Vue.',
+    answer: 'Mostly TypeSript, Vue and Java.',
   },
   {
     question: 'How long have You been programming?',
