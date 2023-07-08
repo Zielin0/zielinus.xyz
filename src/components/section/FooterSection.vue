@@ -16,7 +16,7 @@ const socialList = ref([
   {
     name: 'discord',
     icon: 'fa-brands fa-discord hover:text-[#5865F2]',
-    link: 'https://discord.com/invite/yjVgBQtJ2J',
+    link: 'https://discord.gg/YW2knEvyQS',
   },
   {
     name: 'youtube',
