@@ -16,7 +16,7 @@ const aboutList = [
   },
   {
     question: 'Dotfiles or Terminal Config?',
-    answer: "I'm using Windows Terminal (PowerShell 7.3) with starship.rs",
+    answer: "I'm using Alacritty (zsh 5.9) with starship.rs",
   },
   {
     question: 'How old are You?',
