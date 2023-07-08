@@ -9,10 +9,10 @@ const repoArr: Repo[] = [];
 const repos = ref(repoArr);
 
 const repoLinks = [
+  'Zielin0/zielinus.xyz',
   'Zielin0/dcmchat',
   'Zielin0/HackBot',
-  'Zielin0/zielinus.xyz',
-  'Zielin0/mech',
+  'Zielin0/hypicle',
 ];
 
 repoLinks.forEach(async (repo) => {
