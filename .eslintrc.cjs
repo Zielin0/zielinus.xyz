@@ -11,5 +11,6 @@ module.exports = {
   },
   rules: {
     'vuejs-accessibility/role-has-required-aria-props': 0,
+    'arrow-body-style': 0,
   },
 };

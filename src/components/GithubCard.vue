@@ -4,6 +4,7 @@ import {
   IconGitFork,
   IconStarFilled,
 } from '@tabler/icons-vue';
+import * as languages from '../assets/colors.json';
 import LinkComponent from './LinkComponent.vue';
 
 defineProps({
@@ -36,6 +37,14 @@ defineProps({
     default: 1,
   },
 });
+
+interface LanguageColors {
+  [key: string]: string;
+}
+
+const getColors = (lang: string): string => {
+  return (languages as LanguageColors)[lang];
+};
 </script>
 
 <template>
@@ -85,9 +94,11 @@ defineProps({
       </LinkComponent>
     </div>
     <h2 class="text-md font-roboto font-normal pl-6 pt-1">
-      Language:&nbsp;<span class="font-rowdies font-normal">{{
-        language
-      }}</span>
+      <div
+        class="w-3 h-3 rounded-full inline-block align-middle mr-1"
+        :style="{ backgroundColor: getColors(language) }"
+      />
+      <span class="font-rowdies font-normal align-middle">{{ language }}</span>
     </h2>
   </div>
 </template>
