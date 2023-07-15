@@ -1,3 +1,30 @@
+@font-face {
+  font-family: 'Rowdies';
+  src: url('./assets/rowdies/rowdies-regular-webfont.woff2') format('woff2'),
+    url('./assets/roboto/roboto-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/roboto/roboto-regular-webfont.woff2') format('woff2'),
+    url('assets/roboto/roboto-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/roboto/roboto-bold-webfont.woff2') format('woff2'),
+    url('./assets/roboto/roboto-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
