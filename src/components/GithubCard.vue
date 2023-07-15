@@ -1,4 +1,9 @@
 <script lang="ts" setup>
+import {
+  IconExclamationCircle,
+  IconGitFork,
+  IconStarFilled,
+} from '@tabler/icons-vue';
 import LinkComponent from './LinkComponent.vue';
 
 defineProps({
@@ -67,17 +72,16 @@ defineProps({
     </div>
     <div class="flex font-light pl-6 pt-7 justify-between max-w-[10rem]">
       <LinkComponent :href="`https://github.com/${title}/stargazers`" external>
-        <span>
-          <i class="fa-regular fa-star pr-1 text-yellow" />{{ stars }}
-        </span>
+        <IconStarFilled class="pr-1 text-yellow inline-block align-middle" />
+        <span class="align-middle">{{ stars }}</span>
       </LinkComponent>
       <LinkComponent :href="`https://github.com/${title}/issues`" external>
-        <span>
-          <i class="fa-solid fa-circle-exclamation pr-1" />{{ issues }}
-        </span>
+        <IconExclamationCircle class="pr-1 inline-block align-middle" />
+        <span class="align-middle">{{ issues }}</span>
       </LinkComponent>
       <LinkComponent :href="`https://github.com/${title}/fork`" external>
-        <span><i class="fa-solid fa-code-fork pr-1" />{{ forks }}</span>
+        <IconGitFork class="pr-1 inline-block align-middle" />
+        <span class="align-middle">{{ forks }}</span>
       </LinkComponent>
     </div>
     <h2 class="text-md font-roboto font-normal pl-6 pt-1">

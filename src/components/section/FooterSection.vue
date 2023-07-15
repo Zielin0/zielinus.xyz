@@ -1,36 +1,50 @@
 <script lang="ts" setup>
+import {
+  IconAt,
+  IconBrandDiscordFilled,
+  IconBrandGithubFilled,
+  IconBrandTwitch,
+  IconBrandTwitterFilled,
+  IconBrandYoutube,
+} from '@tabler/icons-vue';
 import { ref } from 'vue';
 import LinkComponent from '../LinkComponent.vue';
 
 const socialList = ref([
   {
     name: 'mail',
-    icon: 'fa-solid fa-at hover:text-[#FFFFFF]',
+    hover: 'hover:text-[#FFFFFF]',
+    icon: IconAt,
     link: 'mailto:me@zielinus.xyz',
   },
   {
     name: 'github',
-    icon: 'fa-brands fa-github hover:text-[#DBDBDB]',
+    hover: 'hover:text-[#DBDBDB]',
+    icon: IconBrandGithubFilled,
     link: 'https://github.com/Zielin0',
   },
   {
     name: 'discord',
-    icon: 'fa-brands fa-discord hover:text-[#5865F2]',
+    hover: 'hover:text-[#5865F2]',
+    icon: IconBrandDiscordFilled,
     link: 'https://discord.gg/YW2knEvyQS',
   },
   {
     name: 'youtube',
-    icon: 'fa-brands fa-youtube hover:text-[#E52D27]',
+    hover: 'hover:text-[#E52D27]',
+    icon: IconBrandYoutube,
     link: 'https://youtube.com/@ZielinoCoding',
   },
   {
     name: 'twitch',
-    icon: 'fa-brands fa-twitch hover:text-[#6441A4]',
+    hover: 'hover:text-[#6441A4]',
+    icon: IconBrandTwitch,
     link: 'https://twitch.tv/zielin0',
   },
   {
     name: 'twitter',
-    icon: 'fa-brands fa-twitter hover:text-[#00ACEE]',
+    hover: 'hover:text-[#00ACEE]',
+    icon: IconBrandTwitterFilled,
     link: 'https://twitter.com/theZielino',
   },
 ]);
@@ -43,7 +57,12 @@ const socialList = ref([
     class="text-white-gray text-3xl lg:text-4xl px-2 lg:px-3"
   >
     <LinkComponent :href="social.link">
-      <i class="transition-colors" :class="social.icon" />
+      <component
+        :is="social.icon"
+        class="transition-colors"
+        :size="36"
+        :class="social.hover"
+      />
     </LinkComponent>
   </div>
 </template>
