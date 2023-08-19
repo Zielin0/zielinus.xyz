@@ -21,7 +21,9 @@ import ProjectSection from '../section/ProjectSection.vue';
   <div
     class="font-rowdies font-normal flex justify-center text-center mt-10 mb-5"
   >
-    <h1 class="text-comment text-md lg:text-xl blur-[1px]">
+    <h1
+      class="text-comment text-md lg:text-xl blur-[1px] hover:blur-0 duration-50"
+    >
       Zielino &copy; 2023
     </h1>
   </div>

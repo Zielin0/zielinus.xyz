@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import {
   IconAt,
-  IconBrandDiscordFilled,
-  IconBrandGithubFilled,
+  IconBrandDiscord,
+  IconBrandGithub,
   IconBrandTwitch,
-  IconBrandTwitterFilled,
+  IconBrandTwitter,
   IconBrandYoutube,
 } from '@tabler/icons-vue';
 import { ref } from 'vue';
@@ -20,13 +20,13 @@ const socialList = ref([
   {
     name: 'github',
     hover: 'hover:text-[#DBDBDB]',
-    icon: IconBrandGithubFilled,
+    icon: IconBrandGithub,
     link: 'https://github.com/Zielin0',
   },
   {
     name: 'discord',
     hover: 'hover:text-[#5865F2]',
-    icon: IconBrandDiscordFilled,
+    icon: IconBrandDiscord,
     link: 'https://discord.gg/YW2knEvyQS',
   },
   {
@@ -44,7 +44,7 @@ const socialList = ref([
   {
     name: 'twitter',
     hover: 'hover:text-[#00ACEE]',
-    icon: IconBrandTwitterFilled,
+    icon: IconBrandTwitter,
     link: 'https://twitter.com/theZielino',
   },
 ]);
