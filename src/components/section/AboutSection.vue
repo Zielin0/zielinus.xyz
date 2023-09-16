@@ -16,7 +16,7 @@ const aboutList = [
   },
   {
     question: 'Dotfiles or Terminal Config?',
-    answer: "I'm using Alacritty (zsh 5.9) with starship.rs",
+    answer: 'Hyprland, kitty, zsh 5.9, starship.rs',
   },
   {
     question: 'How old are You?',
