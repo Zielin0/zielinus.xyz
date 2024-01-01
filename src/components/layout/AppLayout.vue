@@ -3,6 +3,8 @@ import AboutSection from '../section/AboutSection.vue';
 import FooterSection from '../section/FooterSection.vue';
 import HeroSection from '../section/HeroSection.vue';
 import ProjectSection from '../section/ProjectSection.vue';
+
+const year = new Date().getFullYear();
 </script>
 
 <template>
@@ -24,7 +26,7 @@ import ProjectSection from '../section/ProjectSection.vue';
     <h1
       class="text-comment text-md lg:text-xl blur-[1px] hover:blur-0 duration-50"
     >
-      Zielino &copy; 2023
+      Zielino &copy; {{ year }}
     </h1>
   </div>
 </template>
