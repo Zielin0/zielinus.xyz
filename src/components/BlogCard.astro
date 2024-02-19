@@ -1,0 +1,48 @@
+---
+import BlogInfo from './BlogInfo.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  date: string;
+  readTime: number;
+  slug: string;
+}
+
+const { title, description, date, readTime, slug } = Astro.props;
+---
+
+<div class='container'>
+  <p class='card-title'><a href={`/blog/${slug}`}>{title}</a></p>
+  <p class='card-description'>{description}</p>
+  <div class='article-info'>
+    <BlogInfo date={date} readTime={readTime} />
+  </div>
+</div>
+
+<style>
+  .container {
+    max-width: 1000px;
+    min-width: 200px;
+    height: 150px;
+    background-color: var(--background-secondary);
+  }
+
+  .card-title {
+    color: var(--foreground-secondary);
+    font-weight: 700;
+    font-size: 20px;
+    padding: 10px 15px;
+  }
+
+  .card-description {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 15px;
+    margin-top: -20px;
+  }
+
+  .article-info {
+    padding: 0 15px;
+  }
+</style>

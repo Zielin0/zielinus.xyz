@@ -1,4 +1,4 @@
-name: Publish Website to Github Pages
+name: Publish to Github Pages
 run-name:
 on: [push]
 jobs:

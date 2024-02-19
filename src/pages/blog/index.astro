@@ -1,0 +1,43 @@
+---
+import BlogCard from '../../components/BlogCard.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
+
+const posts = await Astro.glob('./**/*.mdx');
+---
+
+<MainLayout title='zielino - blog' description='This is my blog page' blog>
+  <section>
+    <div class='container'>
+      <ul class='post-list'>
+        {
+          posts.map(post => (
+            <li>
+              <BlogCard
+                title={post.frontmatter.title}
+                description={post.frontmatter.description}
+                date={post.frontmatter.date}
+                readTime={post.frontmatter.readTime}
+                slug={post.frontmatter.slug}
+              />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .post-list {
+    list-style: none;
+    padding-inline-start: 0;
+  }
+</style>

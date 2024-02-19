@@ -1,0 +1,77 @@
+---
+interface Props {
+  owner: string;
+  name: string;
+}
+
+const { owner, name } = Astro.props;
+const fullName = `${owner}/${name}`;
+
+interface Repo {
+  description: string;
+  stargazers_count: number;
+}
+
+const data = await fetch(`https://api.github.com/repos/${fullName}`);
+const json = await data.json();
+const repoData = json as Repo;
+
+const failed = repoData.stargazers_count === undefined;
+---
+
+<div class='container'>
+  {
+    failed ? (
+      <p class='card-title'>Failed fetching</p>
+    ) : (
+      <>
+        <p class='card-title'>
+          <a href={`https://github.com/${fullName}`} rel='noopener noreferrer' target='_blank'>
+            {fullName}
+          </a>
+        </p>
+        <p class='card-description'>{repoData.description}</p>
+        <p class='card-stars'>
+          <a
+            href={`https://github.com/${fullName}/stargazers`}
+            rel='noopener noreferrer'
+            target='_blank'
+          >
+            {repoData.stargazers_count}&nbsp;stars
+          </a>
+        </p>
+      </>
+    )
+  }
+</div>
+
+<style>
+  .container {
+    max-width: 600px;
+    min-width: 280px;
+    height: 105px;
+    background-color: var(--background-secondary);
+    margin-bottom: 25px;
+    padding: 0 10px;
+  }
+
+  .card-title {
+    color: var(--foreground-secondary);
+    font-weight: 700;
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+
+  .card-description {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0 10px;
+    margin-top: -15px;
+  }
+
+  .card-stars {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0 10px;
+  }
+</style>
