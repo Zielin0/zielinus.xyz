@@ -1,0 +1,88 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import BlogInfo from '../components/BlogInfo.astro';
+import Footer from '../components/Footer.astro';
+import NavBar from '../components/NavBar.astro';
+
+const {
+  frontmatter: { title, description, date, readTime },
+} = Astro.props;
+---
+
+<html lang='en'>
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+  <body>
+    <NavBar blog />
+    <main>
+      <article>
+        <div class='article-head'>
+          <div class='blog-info'>
+            <BlogInfo date={date} readTime={readTime} />
+          </div>
+          <h1 class='title'>{title}</h1>
+          <p class='description'>{description}</p>
+        </div>
+        <div class='article-body'>
+          <hr />
+          <slot />
+        </div>
+      </article>
+      <div class='center'>
+        <a href='/blog' class='view-all'>view all posts</a>
+      </div>
+    </main>
+    <div class='footer-container'>
+      <Footer />
+    </div>
+
+    <style>
+      html {
+        min-height: 100vh;
+        height: 100%;
+      }
+
+      body {
+        height: 100%;
+      }
+
+      article {
+        padding: 0 10px;
+      }
+
+      .article-head {
+        max-width: 65ch;
+        margin: 0 auto;
+      }
+
+      .blog-info {
+        margin-bottom: -35px;
+      }
+
+      .article-body {
+        max-width: 65ch;
+        margin: 0 auto;
+      }
+
+      .title {
+        font-weight: 700;
+        font-size: 34px;
+      }
+
+      .description {
+        font-weight: 400;
+        margin-top: -10px;
+      }
+
+      hr {
+        margin-bottom: 2.5rem;
+      }
+
+      .view-all {
+        font-weight: 600;
+        margin-top: 2rem;
+      }
+    </style>
+  </body>
+</html>

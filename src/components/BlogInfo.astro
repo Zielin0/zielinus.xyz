@@ -1,0 +1,19 @@
+---
+interface Props {
+  date: string;
+  readTime: number;
+}
+
+const { date, readTime } = Astro.props;
+---
+
+<p class='article-info'>
+  {date}&nbsp;<span class='separator'>/</span>&nbsp;{readTime} min read
+</p>
+
+<style>
+  .article-info {
+    font-size: 18px;
+    font-weight: 500;
+  }
+</style>
