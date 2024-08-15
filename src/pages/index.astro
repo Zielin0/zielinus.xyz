@@ -1,34 +1,14 @@
 ---
-import RepoCard from '../components/RepoCard.astro';
 import MainLayout from '../layouts/MainLayout.astro';
-
-const repos = ['Zielin0/hypicle', 'Zielin0/zielinus.xyz', 'Zielin0/dcmchat', 'Zielin0/HackBot'];
 ---
 
 <MainLayout title='zielino' description='I try to create software'>
   <div class='center stuff'>
-    <p>Hello. I'm zielino and I try to create software.</p>
-  </div>
-  <div class='center repos-container'>
-    <ul class='list'>
-      {
-        repos.map(repo => {
-          const owner = repo.split('/')[0];
-          const name = repo.split('/')[1];
-          return (
-            <li>
-              <RepoCard owner={owner} name={name} />
-            </li>
-          );
-        })
-      }
-    </ul>
+    <p>I make some software sometimes.</p>
   </div>
   <div class='center links-container'>
     <a href='https://github.com/Zielin0' target='_blank' rel='noopener noreferrer'>github</a>
     <a href='mailto:me@zielinus.xyz' target='_blank' rel='noopener noreferrer'>email</a>
-    <a href='https://twitch.tv/zielin0' target='_blank' rel='noopener noreferrer'>twitch</a>
-    <a href='https://discord.gg/YW2knEvyQS' target='_blank' rel='noopener noreferrer'>discord</a>
   </div>
 </MainLayout>
 
@@ -38,14 +18,9 @@ const repos = ['Zielin0/hypicle', 'Zielin0/zielinus.xyz', 'Zielin0/dcmchat', 'Zi
     font-weight: 500;
     margin-top: 4rem;
     padding: 0 10px;
-  }
-
-  .repos-container {
-    display: flex;
-    justify-content: center;
-    text-align: left;
     align-items: center;
-    padding-bottom: 1rem;
+    text-align: center;
+    justify-content: center;
   }
 
   .list {
@@ -54,11 +29,11 @@ const repos = ['Zielin0/hypicle', 'Zielin0/zielinus.xyz', 'Zielin0/dcmchat', 'Zi
   }
 
   .links-container {
-    display: flex;
-    flex-direction: row;
-    font-weight: 700;
-    font-size: 16px;
-    padding-bottom: 70px;
+    position: absolute;
+    padding-bottom: 5rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 
   .links-container a {

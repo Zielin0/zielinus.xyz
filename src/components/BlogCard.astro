@@ -26,6 +26,10 @@ const { title, description, date, readTime, slug } = Astro.props;
     min-width: 200px;
     height: 150px;
     background-color: var(--background-secondary);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--border-color); 
+    border-radius: 10px;
   }
 
   .card-title {
@@ -33,13 +37,13 @@ const { title, description, date, readTime, slug } = Astro.props;
     font-weight: 700;
     font-size: 20px;
     padding: 10px 15px;
+    margin: 0;
   }
 
   .card-description {
     font-size: 16px;
     font-weight: 500;
     padding: 0 15px;
-    margin-top: -20px;
   }
 
   .article-info {

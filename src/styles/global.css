@@ -12,10 +12,11 @@
 
 :root {
   --background-primary: #030303;
-  --background-secondary: #121212;
+  --background-secondary: #080808;
   --foreground-primary: #efefef;
   --foreground-secondary: #e000e4;
-  --selection-background:#b51cb8;
+  --selection-background: #b51cb8;
+  --border-color: #262626;
 }
 
 ::-moz-selection {
