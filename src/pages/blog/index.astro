@@ -2,7 +2,10 @@
 import BlogCard from '../../components/BlogCard.astro';
 import MainLayout from '../../layouts/MainLayout.astro';
 
-const posts = await Astro.glob('./**/*.mdx');
+const postsUnsorted = await Astro.glob('./**/*.mdx');
+const posts = postsUnsorted.sort((a, b) => {
+    return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
+});
 ---
 
 <MainLayout title='zielino - blog' description='This is my blog page' blog>
@@ -11,7 +14,7 @@ const posts = await Astro.glob('./**/*.mdx');
       <ul class='post-list'>
         {
           posts.map(post => (
-            <li>
+            <li class="item">
               <BlogCard
                 title={post.frontmatter.title}
                 description={post.frontmatter.description}
@@ -39,5 +42,9 @@ const posts = await Astro.glob('./**/*.mdx');
   .post-list {
     list-style: none;
     padding-inline-start: 0;
+  }
+
+  .item {
+    margin: 10px 0;
   }
 </style>
