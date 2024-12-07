@@ -4,7 +4,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 
 const postsUnsorted = await Astro.glob('./**/*.mdx');
 const posts = postsUnsorted.sort((a, b) => {
-    return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
+    return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime();
 });
 ---
 
