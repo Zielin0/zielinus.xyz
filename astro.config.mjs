@@ -7,3 +7,4 @@ import expressiveCode from "astro-expressive-code";
 export default defineConfig({
   integrations: [expressiveCode({themes: ['dracula']}), mdx()]
 });
+
