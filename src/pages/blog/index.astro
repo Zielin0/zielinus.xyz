@@ -3,11 +3,18 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/layout.astro";
 import BlogCard from "../../components/blog-card.astro"
 
+<<<<<<< HEAD
 const title = "Blog | zielinus.xyz";
 const description = "A blog page";
 const slug = "blog";
 
 const blog = await getCollection("blog");
+=======
+const postsUnsorted = await Astro.glob('./**/*.mdx');
+const posts = postsUnsorted.sort((a, b) => {
+    return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime();
+});
+>>>>>>> master
 ---
 
 <Layout title={title} description={description} slug={slug} focused="blog">
@@ -18,11 +25,46 @@ const blog = await getCollection("blog");
         </div>
         <div class="flex flex-col gap-4 pt-5">
         {
+<<<<<<< HEAD
             blog.map(post => (
                 <BlogCard data={post.data} />
             ))
+=======
+          posts.map(post => (
+            <li class="item">
+              <BlogCard
+                title={post.frontmatter.title}
+                description={post.frontmatter.description}
+                date={post.frontmatter.date}
+                readTime={post.frontmatter.readTime}
+                slug={post.frontmatter.slug}
+              />
+            </li>
+          ))
+>>>>>>> master
         }
         </div>
     </div>
 </Layout>
 
+<<<<<<< HEAD
+=======
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .post-list {
+    list-style: none;
+    padding-inline-start: 0;
+  }
+
+  .item {
+    margin: 10px 0;
+  }
+</style>
+>>>>>>> master

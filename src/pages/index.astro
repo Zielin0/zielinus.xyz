@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 import Layout from "../layouts/layout.astro";
 
 const title = "Home | zielinus.xyz";
@@ -31,3 +32,46 @@ const slug = "";
     </div>
 </Layout>
 
+=======
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title='zielino' description='I try to create software'>
+  <div class='center stuff'>
+    <p>I make some software sometimes.</p>
+  </div>
+  <div class='center links-container'>
+    <a href='https://github.com/Zielin0' target='_blank' rel='noopener noreferrer'>github</a>
+    <a href='mailto:me@zielinus.xyz' target='_blank' rel='noopener noreferrer'>email</a>
+  </div>
+</MainLayout>
+
+<style>
+  .stuff {
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 4rem;
+    padding: 0 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .list {
+    list-style: none;
+    padding-inline-start: 0;
+  }
+
+  .links-container {
+    position: absolute;
+    padding-bottom: 5rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .links-container a {
+    padding: 0 10px;
+  }
+</style>
+>>>>>>> master
