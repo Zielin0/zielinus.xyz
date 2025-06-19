@@ -1,15 +1,29 @@
-@font-face {
-  font-family: "Roboto Mono";
-  src: url("../assets/RobotoMono-Italic-VariableFont_wght.woff") format("woff");
-  font-display: swap;
+@import "tailwindcss";
+
+@theme {
+    --font-roboto: "Roboto Mono", "sans-serif";
+    --color-primary: #4269ff;
+    --color-foreground: #fefefe;
+    --color-background: #161616;
+    --color-card: #1a1a1a;
 }
 
 @font-face {
-  font-family: "Roboto Mono";
-  src: url("../assets/RobotoMono-VariableFont_wght.woff") format("woff");
-  font-display: swap;
+    font-family: "Roboto Mono";
+    src: url("../assets/RobotoMono-Italic-VariableFont_wght.woff") format("woff");
+    font-display: swap;
 }
 
+<<<<<<< HEAD
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("../assets/RobotoMono-VariableFont_wght.woff") format("woff");
+    font-display: swap;
+}
+
+html {
+    scroll-behavior: smooth;
+=======
 :root {
   --background-primary: #030303;
   --background-secondary: #080808;
@@ -17,110 +31,16 @@
   --foreground-secondary: #e000e4;
   --selection-background: #b51cb8;
   --border-color: #262626;
+>>>>>>> master
 }
 
 ::-moz-selection {
-  color: var(--foreground-primary);
-  background: var(--selection-background);
+    color: var(--color-foreground);
+    background: var(--color-primary);
 }
 
 ::selection {
-  color: var(--foreground-primary);
-  background: var(--selection-background);
+    color: var(--color-foreground);
+    background: var(--color-primary);
 }
 
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: #202020;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #4f4f4f;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #333;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  line-height: 1.5;
-  color: var(--foreground-primary);
-  background-color: var(--background-primary);
-  width: 100%;
-  font-family: "Roboto Mono";
-}
-
-.separator {
-  color: var(--foreground-secondary);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong,
-b {
-  color: var(--foreground-primary);
-}
-
-a {
-  color: var(--foreground-secondary);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-blockquote {
-  border-left: 10px solid #262626;
-  background: var(--background-secondary);
-  font-style: italic;
-}
-
-blockquote p {
-  padding: 5px 10px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-textarea {
-  width: 100%;
-  font-size: 16px;
-}
-
-input {
-  font-size: 16px;
-}
-
-content {
-  line-height: 1.6;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 2px solid var(--background-secondary);
-  margin: 1em 0;
-  padding: 0;
-}

@@ -1,0 +1,73 @@
+---
+import "../../styles/post.css";
+import Layout from "../../layouts/layout.astro";
+import Badge from "../../components/badge.astro";;
+import TableOfContents from "../../components/table-of-contents.astro";
+import { getCollection, render } from "astro:content";
+import { statusColorMap, languagesColorMap } from "../../data.ts"
+
+export async function getStaticPaths() {
+    const posts = await getCollection("projects");
+    return posts.map(post => ({
+        params: { name: post.data.name },
+        props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await render(post);
+
+const title = `${post.data.name} | zielinus.xyz`
+const description = post.data.description;
+const slug = `projects/${post.data.name}`;
+
+const shortSource = post.data.source.split("https://github.com/")[1];
+---
+
+<Layout title={title} description={description} slug={slug} focused="projects">
+    <div class="flex flex-col items-center">
+        <div class="flex xl:flex-row flex-col">
+            <div class="flex flex-col lg:min-w-5xl md:min-w-3xl text-left">
+                <div class="flex flex-col gap-1">
+                    <div>
+                        <p class="max-w-fit text-base text-primary hover:underline hover:decoration-wavy"><a href="/projects" target="_self" rel="noopener noreferrer"><- back</a></p>
+                        <h1 class="text-5xl font-bold">{post.data.name}</h1>
+                        <p class="text-xl text-gray-200 pt-1">{description}</p>
+                    </div>
+                    <div class="flex flex-col gap-1 pt-2">
+                        <div class="flex flex-row gap-1">
+                            <p class="text-base text-gray-300">Status:</p>
+                            <p class="text-base">
+                                <Badge text={post.data.status} color={statusColorMap[post.data.status]} isColor />
+                            </p>
+                        </div>
+                        <div class="flex flex-row gap-1">
+                            <p class="text-base text-gray-300">Languages:</p>
+                            <p class="text-base flex flex-row gap-1">
+                            {
+                                post.data.languages.map(lang => (
+                                    <Badge text={lang} color={languagesColorMap[lang]} isColor />
+                                ))
+                            }
+                            </p>
+                        </div>
+                        <div class="flex flex-row gap-1">
+                            <p class="text-base text-gray-300">Source:</p>
+                            <p class="text-base text-primary hover:underline hover:decoration-wavy"><a href={post.data.source} target="_self" rel="noopener noreferrer">{shortSource}</a></p>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div id="content">
+                    <Content />
+                </div>
+            </div>
+            <div class="flex flex-col ml-6">
+                <div class="xl:flex hidden xl:sticky xl:top-0 xl:pt-10">
+                    <TableOfContents headings={headings} />
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+

@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+#content h1 {
+    font-size: var(--text-3xl);
+    line-height: var(--text-3xl--line-height);
+    font-weight: 700;
+    padding-block: calc(var(--spacing) * 2);
+    position: relative;
+}
+
+#content h2 {
+    font-size: var(--text-2xl);
+    line-height: var(--text-2xl--line-height);
+    font-weight: 700;
+    padding-block: calc(var(--spacing) * 2);
+}
+
+#content h3 {
+    font-size: var(--text-xl);
+    line-height: var(--text-xl--line-height);
+    font-weight: 700;
+    padding-block: calc(var(--spacing) * 2);
+}
+
+#content h4 {
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
+    font-weight: 700;
+    padding-block: calc(var(--spacing) * 2);
+}
+
+#content h5 {
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+    font-weight: 700;
+    padding-block: calc(var(--spacing) * 2);
+}
+
+#content p {
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+    padding-block: calc(var(--spacing) * 0.15);
+}
+
+#content a {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+#content a:hover {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+#content strong, #content b {
+    font-weight: 700;
+}
+
+#content blockquote {
+    border-left: 8px solid var(--color-neutral-700);
+    font-style: italic;
+    margin-block: calc(var(--spacing) * 0.5);
+}
+
+#content blockquote p {
+    padding: 5px 10px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid var(--color-neutral-700);
+    margin: 1em 0;
+    padding: 0;
+}
+
+#content code:not(.expressive-code code) {
+    border: 1px solid var(--color-neutral-600);
+    background-color: var(--color-neutral-900);
+    padding-inline: calc(var(--spacing) * 1.25);
+    padding-block: calc(var(--spacing) * 0.15);
+    border-radius: var(--radius-md);
+}
+
+.expressive-code {
+    margin-block: calc(var(--spacing) * 3);
+}
+
+#content ul {
+    list-style-position: inside;
+    list-style-type: square;
+    margin-block: calc(var(--spacing) * 2);
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+}
+
+#content ol {
+    list-style-position: inside;
+    list-style-type: arabic;
+    margin-block: calc(var(--spacing) * 2);
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+}
+

@@ -1,18 +1,35 @@
 ---
-import BlogCard from '../../components/BlogCard.astro';
-import MainLayout from '../../layouts/MainLayout.astro';
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/layout.astro";
+import BlogCard from "../../components/blog-card.astro"
 
+<<<<<<< HEAD
+const title = "Blog | zielinus.xyz";
+const description = "A blog page";
+const slug = "blog";
+
+const blog = await getCollection("blog");
+=======
 const postsUnsorted = await Astro.glob('./**/*.mdx');
 const posts = postsUnsorted.sort((a, b) => {
     return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime();
 });
+>>>>>>> master
 ---
 
-<MainLayout title='zielino - blog' description='This is my blog page' blog>
-  <section>
-    <div class='container'>
-      <ul class='post-list'>
+<Layout title={title} description={description} slug={slug} focused="blog">
+    <div class="flex flex-col items-center">
+        <div class="text-left xs:w-lg sm:w-md w-[22rem]">
+            <h1 class="text-3xl font-bold">Blog</h1>
+            <p class="text-lg py-1 text-gray-200">A list of blog posts I've written.</p>
+        </div>
+        <div class="flex flex-col gap-4 pt-5">
         {
+<<<<<<< HEAD
+            blog.map(post => (
+                <BlogCard data={post.data} />
+            ))
+=======
           posts.map(post => (
             <li class="item">
               <BlogCard
@@ -24,12 +41,14 @@ const posts = postsUnsorted.sort((a, b) => {
               />
             </li>
           ))
+>>>>>>> master
         }
-      </ul>
+        </div>
     </div>
-  </section>
-</MainLayout>
+</Layout>
 
+<<<<<<< HEAD
+=======
 <style>
   .container {
     display: flex;
@@ -48,3 +67,4 @@ const posts = postsUnsorted.sort((a, b) => {
     margin: 10px 0;
   }
 </style>
+>>>>>>> master
