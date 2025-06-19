@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, intial-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link rel="icon" href="/favicon.svg" type="image/svg"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4269ff"><meta name="msapplication-TitleColor" content="#4269ff"><meta name="msapplication-TitleImage" content="https://zielinus.xyz/logo192.png"><meta name="apple-touch-icon" content="https://zielinus.xyz/logo192.png"><meta name="description" content="A Chat Server + Client written in C "><meta name="title" content="czat | zielinus.xyz"><title>czat | zielinus.xyz</title><meta property="og:title" content="czat | zielinus.xyz"><meta property="og:description" content="A Chat Server + Client written in C "><meta property="og:type" content="website"><meta property="og:url" content="https://zielinus.xyz/projects/czat"><meta property="og:image" content="https://zielinus.xyz/logo512.png"><meta property="og:site_name" content="zielinus.xyz"><meta name="keywords" content="zielino, zielinus, zielin0, Zielin0, ZIELINO, ZIELIN0, Zielino, Zielin, zielin, zielinsus, zielinosus, gernishon"><link rel="stylesheet" href="/_astro/_slug_._U1oEant.css">
+<link rel="stylesheet" href="/_astro/_slug_.C5flavvJ.css"></head> <body> <div class="min-h-screen bg-background flex flex-col text-foreground"> <div class="h-18 flex flex-row items-center justify-between sm:px-8 px-4 font-roboto text-lg"> <div> <a href="/" target="_self" rel="noopener noreferrer"> <p class="text-primary font-bold text-4xl hover:underline hover:decoration-wavy hidden sm:block">zielino</p> <p class="text-primary font-bold text-4xl hover:underline hover:decoration-wavy sm:hidden block">z</p> </a> </div> <div> <ul class="flex flex-row gap-5"> <li class="text-primary font-bold hover:underline hover:decoration-wavy text-lg "> <a href="/" target="_self" rel="noopener noreferrer">about</a> </li> <li class="text-primary font-bold hover:underline hover:decoration-wavy text-lg underline decoration-dashed"> <a href="/projects" target="_self" rel="noopener noreferrer">projects</a> </li> <li class="text-primary font-bold hover:underline hover:decoration-wavy text-lg "> <a href="/blog" target="_self" rel="noopener noreferrer">blog</a> </li> <li class="text-gray-500 text-bold text-lg sm:block hidden">
+support
+</li> </ul> </div> </div> <article class="h-full w-full grow flex flex-col items-center pt-6 font-roboto text-lg"> <div class="h-full sm:w-[75%] w-[90%] xl:w-full">  <div class="flex flex-col items-center md:px-5"> <div class="flex xl:flex-row flex-col"> <div class="flex flex-col lg:min-w-4xl md:min-w-3xl text-left"> <div class="flex flex-col gap-1"> <div> <p class="max-w-fit text-base text-primary hover:underline hover:decoration-wavy"><a href="/projects" target="_self" rel="noopener noreferrer"><- back</a></p> <h1 class="text-5xl font-bold">czat</h1> <p class="text-xl text-gray-200 pt-1">A Chat Server + Client written in C </p> </div> <div class="flex flex-col gap-1 pt-2"> <div class="flex flex-row gap-1"> <p class="text-base text-gray-300">Status:</p> <p class="text-base"> <div class="flex flex-row border border-gray-500 rounded-2xl items-center px-2 gap-1"> <span class="w-[10px] h-[10px] rounded-full" style="background-color: #fb2c36"></span> <p class="text-sm">Abandoned</p> </div> </p> </div> <div class="flex flex-row gap-1"> <p class="text-base text-gray-300">Languages:</p> <p class="text-base flex flex-row gap-1"> <div class="flex flex-row border border-gray-500 rounded-2xl items-center px-2 gap-1"> <span class="w-[10px] h-[10px] rounded-full" style="background-color: #555555"></span> <p class="text-sm">C</p> </div><div class="flex flex-row border border-gray-500 rounded-2xl items-center px-2 gap-1"> <span class="w-[10px] h-[10px] rounded-full" style="background-color: #e38c00"></span> <p class="text-sm">SQL</p> </div><div class="flex flex-row border border-gray-500 rounded-2xl items-center px-2 gap-1"> <span class="w-[10px] h-[10px] rounded-full" style="background-color: #89e051"></span> <p class="text-sm">Shell</p> </div> </p> </div> <div class="flex flex-row gap-1"> <p class="text-base text-gray-300">Read Time:</p> <p class="text-base text-gray-400">10 min read (1948 words)</p> </div> <div class="flex flex-row gap-1"> <p class="text-base text-gray-300">Source:</p> <p class="text-base text-gray-500 line-through">Zielin0/czat</p> </div> </div> </div> <hr> <div class="break-keep" id="content"> <p><em><strong>czat</strong></em> was supposed to be a chat server plus a chat client all written in C.</p>
+<p>It was supposed to use SQL and <a href="https://sqlite.org/index.html">sqlite3</a> for databases.</p>
+<p>It was supposed to be secure using <a href="https://www.openssl.org/">OpenSSL</a> and SSL certificates.</p>
+<p>It was supposed to use raw C sockets and TCP packets.</p>
+<p>The client was supposed to be a GUI application, and the server was supposed to be a console app.</p>
+<p>The word <em>czat</em> comes from Polish - my native language, it means <em>a conversation via internet</em>.</p>
+<h1 id="the-idea">The Idea</h1>
+<p>I was playing around with <a href="https://www.qt.io/product/qt6">Qt6</a> one day, just making a random GUI app.</p>
+<p>And then I got the idea of making a chat client with Qt6. Sounded simple enough so I started.</p>
+<p>Then I realized I was going to need a server for that. I considered making an IRC client, but</p>
+<p>my own server sounded better. So I decided to make the client using Qt6 tool for designing UI and</p>
+<p>and IDE in one. Very slow software. And the server was supposed to be in C.</p>
+<p>Then I thought that it would be cool to make it secure with SSL as well.</p>
+<h1 id="first-steps">First Steps</h1>
+<p>So I started designing the whole client interface in Qt6 software first, when I made a big part</p>
+<p>of the UI, I decided to move to the server side. So I started developing the server in C using</p>
+<p>both OpenSSL for a secure connection and sqlite3 for databases.</p>
+<h1 id="a-switch">A Switch</h1>
+<p>I decided that Qt6 was too slow, janky, and ugly. So I decided to switch the “frontend” stack.</p>
+<p>I switched from C++ and Qt6 to C with raysan5’s <a href="https://github.com/raysan5/raylib/">raylib</a> and <a href="https://github.com/raysan5/raygui/">raygui</a>.</p>
+<p>At this point I had some experience with raylib, raygui, and C, and I thought the client side</p>
+<p>would be way faster in performance, more comfortable to write and use.</p>
+<h1 id="the-server-side">The Server Side</h1>
+<p>The server side was fully written in C, using OpenSSL’s C library and sqlite3’s C library.</p>
+<p>The server also used SQL inside of the C code and outside as standalone files for creating tables</p>
+<p>and migrations.</p>
+<h2 id="the-structure">The Structure</h2>
+<p>The server’s structure was divided into 4 main parts:</p>
+<ul>
+<li>The Database System - For database communication</li>
+<li>The Logging System - For logging messages into the console and a file</li>
+<li>The Packet System - For sending meaningful data between peers</li>
+<li>The Server System - The Core of the server</li>
+</ul>
+<h2 id="the-database-system">The Database System</h2>
+<p>The system of connecting and communicating with a database might be the most interesting here.</p>
+<p>I had so much fun playing around with sqlite3 and learning some more SQL along the way.</p>
+<p>Something I saw <a href="https://github.com/Tsoding/">Tsoding</a> use was a migration system in C using sqlite3.</p>
+<p>I believe it was for his personal terminal reminder app <a href="https://github.com/rexim/tore">tore</a>.</p>
+<p>So I decided to steal some of that code, modify it and apply it to my codebase.</p>
+<p>The database was just an sqlite file in my home directory.</p>
+<p>So I had this whole API file with schemas for operating with tables and functions for this and more.</p>
+<p>I used the transaction feature to apply the migrations which I discovered in Tsoding’s tore.</p>
+<p>The migrations were applied if the last entry in the migration table was less than the last file</p>
+<p>in the migrations folder. The format was <code>XX-name.sql</code> where <em><strong>XX</strong></em> was a two-digit left-padded number.</p>
+<p>Besides all that stuff I had a lot of functions for easy database communication. It was very fun.</p>
+<h2 id="logging">Logging</h2>
+<p>I had a very basic loggin system for the server. It used variadic arguments, a simple enum for</p>
+<p>the log level, and a file descriptor to output the logs to a <code>.log</code> file when the server would</p>
+<p>either crash or close.</p>
+<p>Very simple system, just printed the date and time, the level, and the message.</p>
+<h2 id="packets">Packets</h2>
+<p>I had a simple packet system for transfering data between the peers (server and client).</p>
+<p>Up to this point I had <strong>8</strong> packets:</p>
+<ul>
+<li>Response packet - this was sent from the server to the client,</li>
+</ul>
+<p>with a packet id it responded to</p>
+<ul>
+<li>Ping packet - just a packet to check the connection and communication</li>
+<li>Pong packet - sent by the client upon receiving the ping packet</li>
+<li>Register packet - this was used to register a user</li>
+<li>Credentials Login packet - this packet was used to log in a user through a login and a password</li>
+<li>Session Login packet - upon loggin in with credentials, a session key was generated</li>
+</ul>
+<p>this packet is used to log in with that session key</p>
+<ul>
+<li>Message packet - this packet had all the message data that was being sent from a clien to the server</li>
+<li>New Session packet - this packet requested a new session key from the server</li>
+<li>User Data packet - this packet responded with all of the public user data</li>
+</ul>
+<p>The packet was a structure composed like so:</p>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.zr6ak.css"><script type="module" src="/_astro/ec.8zarh.js"></script><figure class="frame"><figcaption class="header"></figcaption><pre data-language="c"><code><div class="ec-line"><div class="code"><span style="--0:#A18DC0">typedef</span><span style="--0:#DCD7BA"> </span><span style="--0:#A18DC0">struct</span><span style="--0:#DCD7BA"> </span><span style="--0:#9CABCA">{</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#DCD7BA">    </span></span><span style="--0:#DCD7BA">PacketType type</span><span style="--0:#9CABCA">;</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#DCD7BA">    </span></span><span style="--0:#DCD7BA">PacketData data</span><span style="--0:#9CABCA">;</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#A18DC0">struct</span><span style="--0:#DCD7BA"> tm timestamp</span><span style="--0:#9CABCA">;</span></div></div><div class="ec-line"><div class="code"><span style="--0:#9CABCA">}</span><span style="--0:#DCD7BA"> Packet</span><span style="--0:#9CABCA">;</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="typedef struct {    PacketType type;    PacketData data;    struct tm timestamp;} Packet;"><div></div></button></div></figure></div>
+<p><code>PacketType</code> was an enum, and <code>PacketData</code> was an union composed of structures for each packet.</p>
+<p>I tried using <code>void*</code> as the packet data and casting it to an appropriate structure on both sides,</p>
+<p>but nothing would work. That’s because void* points to a memory address of the current program,</p>
+<p>accessing a memory address of another program wouldn’t work because it would either segfault or</p>
+<p>get random garbage from the memory.</p>
+<p>The packet API had 2 creation functions, and 2 validation functions, these were for validating</p>
+<p>register data and credential login data.</p>
+<h2 id="the-server-system">The Server System</h2>
+<p>The server had a limit of <strong>100</strong> users connected at the same time.</p>
+<p>The server had a nice structure to it.</p>
+<p>The <code>ServerState</code> structure had a <code>Socket</code> which was the main TCP server socket.</p>
+<p>It had a <code>Client[CLIENT_LIMIT]</code> array. An accept thread descriptor, it also had a <code>Database</code> pointer,</p>
+<p>which was just a structure wrapper for <code>sqlite3</code> structure. I thought I would need more data for the</p>
+<p>database but it turned out false and I was just too lazy to replace <code>Database</code> with <code>sqlite3</code>.</p>
+<p>The server also had the SSL context.</p>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre data-language="c"><code><div class="ec-line"><div class="code"><span style="--0:#A18DC0">typedef</span><span style="--0:#DCD7BA"> </span><span style="--0:#A18DC0">struct</span><span style="--0:#DCD7BA"> </span><span style="--0:#9CABCA">{</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#DCD7BA">    </span></span><span style="--0:#DCD7BA">Socket socket</span><span style="--0:#9CABCA">;</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#DCD7BA">    </span></span><span style="--0:#DCD7BA">Client clients</span><span style="--0:#9CABCA">[</span><span style="--0:#DCD7BA">CLIENT_LIMIT</span><span style="--0:#9CABCA">];</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#A18DC0">pthread_t</span><span style="--0:#DCD7BA"> accept_thread</span><span style="--0:#9CABCA">;</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#DCD7BA">    </span></span><span style="--0:#DCD7BA">Database</span><span style="--0:#E6C384">*</span><span style="--0:#DCD7BA"> db</span><span style="--0:#9CABCA">;</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#DCD7BA">    </span></span><span style="--0:#DCD7BA">SSL_CTX</span><span style="--0:#E6C384">*</span><span style="--0:#DCD7BA"> ssl_ctx</span><span style="--0:#9CABCA">;</span></div></div><div class="ec-line"><div class="code"><span style="--0:#9CABCA">}</span><span style="--0:#DCD7BA"> ServerState</span><span style="--0:#9CABCA">;</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="typedef struct {    Socket socket;    Client clients[CLIENT_LIMIT];    pthread_t accept_thread;    Database* db;    SSL_CTX* ssl_ctx;} ServerState;"><div></div></button></div></figure></div>
+<p>The <code>Client</code> structure had a socket for that particular client. It had a thread descriptor for</p>
+<p>its own thread. A <code>void*</code> that was a pointer to the server state. A <code>Database</code> pointer. And an SSL</p>
+<p>connection.</p>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre data-language="c"><code><div class="ec-line"><div class="code"><span style="--0:#A18DC0">typedef</span><span style="--0:#DCD7BA"> </span><span style="--0:#A18DC0">struct</span><span style="--0:#DCD7BA"> </span><span style="--0:#9CABCA">{</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#DCD7BA">    </span></span><span style="--0:#DCD7BA">Socket socket</span><span style="--0:#9CABCA">;</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#A18DC0">pthread_t</span><span style="--0:#DCD7BA"> thread</span><span style="--0:#9CABCA">;</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#A18DC0">void</span><span style="--0:#E6C384">*</span><span style="--0:#DCD7BA"> server</span><span style="--0:#9CABCA">;</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#DCD7BA">    </span></span><span style="--0:#DCD7BA">Database</span><span style="--0:#E6C384">*</span><span style="--0:#DCD7BA"> db</span><span style="--0:#9CABCA">;</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#DCD7BA">    </span></span><span style="--0:#DCD7BA">SSL</span><span style="--0:#E6C384">*</span><span style="--0:#DCD7BA"> ssl</span><span style="--0:#9CABCA">;</span></div></div><div class="ec-line"><div class="code"><span style="--0:#9CABCA">}</span><span style="--0:#DCD7BA"> Client</span><span style="--0:#9CABCA">;</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="typedef struct {    Socket socket;    pthread_t thread;    void* server;    Database* db;    SSL* ssl;} Client;"><div></div></button></div></figure></div>
+<p>The <code>Socket</code> structure had a file descriptor for that particular socket, and an address.</p>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre data-language="c"><code><div class="ec-line"><div class="code"><span style="--0:#A18DC0">typedef</span><span style="--0:#DCD7BA"> </span><span style="--0:#A18DC0">struct</span><span style="--0:#DCD7BA"> </span><span style="--0:#9CABCA">{</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#A18DC0">int</span><span style="--0:#DCD7BA"> fd</span><span style="--0:#9CABCA">;</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#A18DC0">struct</span><span style="--0:#DCD7BA"> sockaddr_in addr</span><span style="--0:#9CABCA">;</span></div></div><div class="ec-line"><div class="code"><span style="--0:#9CABCA">}</span><span style="--0:#DCD7BA"> Socket</span><span style="--0:#9CABCA">;</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="typedef struct {    int fd;    struct sockaddr_in addr;} Socket;"><div></div></button></div></figure></div>
+<p>The server had a lot of functions. Let’s go through them:</p>
+<ul>
+<li>Initialization - both for the server in general and for the secure connection</li>
+<li>Closing - again, both for the server in general and for the secure connection</li>
+<li>Threading - the accept thread, used to accept incoming connections, and a thread for every client</li>
+<li>Reading and writing - for packets and plain text, although plain text was only for debugging</li>
+<li>Broadcast - used to broadcast a message to every connected user</li>
+<li>Expect packet - for example server would expect a PONG packet if it sent a PING packet</li>
+<li>Register, Credential Login, and Session Login - pretty much self-explanatory</li>
+</ul>
+<p>~</p>
+<p>That is it for the server side, in short. The server has over 2500 lines of code in C.</p>
+<p>It’s the most I’ve written in this language. And there’s still the client side.</p>
+<h1 id="the-client-side">The Client Side</h1>
+<p>After ditching Qt6 I decided to use raylib, raygui and C, like I mentioned above.</p>
+<p>It was easier for me to write both the backend and the frontend in the same language.</p>
+<p>And with libraries I was already familiar with, unlike Qt6 which was completely new to me.</p>
+<h2 id="the-structure-1">The Structure</h2>
+<p>The client’s structure was a little bit simpler than the server’s structure.</p>
+<p>It was divided into 3 parts:</p>
+<ul>
+<li>GUI - For the graphical interface</li>
+<li>Connection - For connecting to the server</li>
+<li>Client - Everything put together to make it work</li>
+</ul>
+<h2 id="the-graphical-interface">The Graphical Interface</h2>
+<p>Most of the graphical interface came from raygui itself. This part of the client held</p>
+<p>helper UI controls or custom UI controls based on the raygui’s ones.</p>
+<h2 id="the-connection-system">The Connection System</h2>
+<p>Really simple system, way simpler than the server’s one.</p>
+<p>Basically had all the packet data, packet enumeration, certificate data, and some connection utils</p>
+<p>in one place. In addition it had all the necessary functions for connection, sending and receiving</p>
+<p>packets and other connection related stuff.</p>
+<h2 id="the-client-system">The Client System</h2>
+<p>Everything put together.</p>
+<p>The UI and the connection in one place.</p>
+<p>This had all the states of the UI and the client itself. Some utils like username colors. And</p>
+<p>all of the functions including:</p>
+<ul>
+<li>Initializing/Closing the client</li>
+<li>Loading the styles (czat-specific ones, not related to raygui that much)</li>
+<li>The main loop</li>
+<li>Rendering all of the states:
+<ul>
+<li>Login Window and Form</li>
+<li>Register Window and Form</li>
+<li>Chat Window</li>
+<li>Settings Window</li>
+</ul>
+</li>
+<li>Client-Side Validation of credentials</li>
+<li>Data sender functions</li>
+<li>A connection thread</li>
+</ul>
+<p>~</p>
+<p>That is it for the client side.</p>
+<p>I mentioned the lines of code count in the server section so I’m going to do that here as well.</p>
+<p>The client side has over 2000 lines of code.</p>
+<h1 id="the-build-system">The Build System</h1>
+<p>I did not make the mistake of <a href="https://zielinus.xyz/projects/baint#do-not-use-make">baint</a> and I did not use make.</p>
+<p>For both sides I used shell scripts. For building itself and for utility.</p>
+<h2 id="server-scripts">Server Scripts</h2>
+<p>I had <strong>3</strong> shell scripts on the server side.</p>
+<ul>
+<li><code>build.sh</code> - For building the server executable, accepted an argument of <code>debug</code> for obvious reasons.</li>
+<li><code>cert.sh</code> - For generating an SSL certificate and a certificate key.</li>
+<li><code>sqlite.sh</code> - For downloading and building the sqlite3 amalgamation.</li>
+</ul>
+<h2 id="client-scripts">Client Scripts</h2>
+<p>On the client side I only had a single script.</p>
+<ul>
+<li><code>build.sh</code> - For building the client executable, also accepted an argument - like the server.</li>
+</ul>
+<h1 id="the-end">The End</h1>
+<p>I stepped away from this project 2 months ago. It’s 2025-06-19 as I’m writing this.</p>
+<p>It was today that I decided to stop working on this project. I had some TODOs in mind.</p>
+<p>I wanted to create a channel system, add user avatars, more customization, great things in general.</p>
+<p>But I realized that I do not want to work on this project anymore.</p>
+<p>Don’t get me wrong, working on the server was super fun. And I learned a lot of things.</p>
+<p>It’s just that the client is so boring and tedious to develop, almost no effects at all.</p>
+<p>I also wanted to implement some stuff using raygui’s code but it did not go well.</p>
+<p>I don’t think there’s anything wrong with any library used or the client’s codebase.</p>
+<p><em>Well…</em> Maybe the client’s codebase is not as good as server’s but it’s not the worst.</p>
+<h1 id="what-i-learned">What I learned</h1>
+<p>A lot. Really. I learned a lot of things while working on this project. And that’s the most</p>
+<p>important thing about working on fun projects. To learn stuff. Cool nerdy stuff.</p>
+<p>So here’s a list of what I think I learned:</p>
+<ul>
+<li>sqlite3, more SQL, database migrations, and general database knowledge</li>
+</ul>
+<p>I really learned a lot about these. Just how to use the sqlite3 C library in general.</p>
+<p>SQL transactions, refreshed usual SQL queries.</p>
+<p>And the biggest thing here, database migrations. I have used them before. <em>In a web app…</em></p>
+<p>Obviously I had no idea how it worked then, but I do now! And it’s very cool. All thanks to</p>
+<p>Tsoding on this one.</p>
+<ul>
+<li>threading in C</li>
+</ul>
+<p>I had a very limited amount of knowledge about threading in software in general.</p>
+<p>It all changed with this project. I learned how to create threads and use them. I don’t think</p>
+<p>some sort of a lock is possible in <strong>czat</strong> but there may or may not exist some issues with data.</p>
+<p>I don’t think I used any mutexes in this project, but if there is an issue then I don’t know about it</p>
+<p>and I won’t even fix it because this project is dead.</p>
+<ul>
+<li>raw C sockets, TCP, sending and receiving data</li>
+</ul>
+<p>Like I mentioned before in this post, I had an issue with a <code>void*</code> on the packet data.</p>
+<p>That was a great thing to learn. Raw sockets, again, very limited knowledge before, it’s more</p>
+<p>now, but not perfect, there’s always room for improvement. TCP packets in general, was cool</p>
+<p>to dive deeper about that stuff.</p>
+<p>~</p>
+<p>These are the highlights but I learned so much more for sure. I just can’t remember everything as</p>
+<p>of writing this.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>I learned a lot while working on this project. Also I learned that Qt6 is not that good.</p>
+<p>It’s bad actually. At least the way I used it. I suspect that using it programatically would be</p>
+<p>way easier. But I was just too lazy to migrate the project to that way of making Qt6 apps and moved</p>
+<p>to something I was familiar with.</p>
+<p>The source code will probably stay private, though I might make the server code public.</p>
+<p>I kinda like it.</p>
+<p>:wq!</p>
+<p>- ziel</p> </div> </div> <div class="flex flex-col ml-6"> <div class="xl:flex hidden xl:sticky xl:top-0 xl:pt-10"> <nav><h3 class="text-xl text-gray-200 font-bold">Table Of Contents</h3><ul class="text-base"><li> <a href="#the-idea" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 1. The Idea </a>  </li><li> <a href="#first-steps" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 2. First Steps </a>  </li><li> <a href="#a-switch" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 3. A Switch </a>  </li><li> <a href="#the-server-side" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 4. The Server Side </a> <ul> <li> <a href="#the-structure" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 4.1. The Structure </a>  </li><li> <a href="#the-database-system" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 4.2. The Database System </a>  </li><li> <a href="#logging" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 4.3. Logging </a>  </li><li> <a href="#packets" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 4.4. Packets </a>  </li><li> <a href="#the-server-system" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 4.5. The Server System </a>  </li> </ul> </li><li> <a href="#the-client-side" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 5. The Client Side </a> <ul> <li> <a href="#the-structure-1" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 5.1. The Structure </a>  </li><li> <a href="#the-graphical-interface" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 5.2. The Graphical Interface </a>  </li><li> <a href="#the-connection-system" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 5.3. The Connection System </a>  </li><li> <a href="#the-client-system" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 5.4. The Client System </a>  </li> </ul> </li><li> <a href="#the-build-system" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 6. The Build System </a> <ul> <li> <a href="#server-scripts" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 6.1. Server Scripts </a>  </li><li> <a href="#client-scripts" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 6.2. Client Scripts </a>  </li> </ul> </li><li> <a href="#the-end" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 7. The End </a>  </li><li> <a href="#what-i-learned" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 8. What I learned </a>  </li><li> <a href="#conclusion" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 9. Conclusion </a>  </li></ul></nav> </div> </div> </div> </div>  </div> </article> <footer class="flex items-center flex-col pb-3 pt-6 text-sm font-bold font-roboto">
+zielino&nbsp;&copy;&nbsp;2025 </footer> </div> </body></html>
