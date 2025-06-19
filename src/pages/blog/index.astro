@@ -7,7 +7,7 @@ const title = "Blog | zielinus.xyz";
 const description = "A blog page";
 const slug = "blog";
 
-const blog = await getCollection("blog");
+const blog = (await getCollection("blog")).sort((a, b) => b.data.updated.localeCompare(a.data.updated));
 ---
 
 <Layout title={title} description={description} slug={slug} focused="blog">

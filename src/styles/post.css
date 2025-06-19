@@ -95,6 +95,29 @@ hr {
     line-height: var(--text-base--line-height);
 }
 
+#content ul ul {
+    list-style-position: inside;
+    list-style-type: disc;
+    margin-block: calc(var(--spacing) * 2);
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+    margin-left: calc(var(--spacing) * 3);
+}
+
+#content ul ul ul {
+    list-style-position: inside;
+    list-style-type: none;
+    margin-block: calc(var(--spacing) * 2);
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+    margin-left: calc(var(--spacing) * 3);
+}
+
+#content ul ul ul li::before {
+    content: "- ";
+    margin-right: calc(var(--spacing) * 0.5);
+}
+
 #content ol {
     list-style-position: inside;
     list-style-type: arabic;

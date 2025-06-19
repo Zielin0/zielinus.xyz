@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content, headings } = await render(post);
+const { Content, remarkPluginFrontmatter, headings } = await render(post);
 
 const title = `${post.data.name} | zielinus.xyz`
 const description = post.data.description;
@@ -25,9 +25,9 @@ const shortSource = post.data.source.split("https://github.com/")[1];
 ---
 
 <Layout title={title} description={description} slug={slug} focused="projects">
-    <div class="flex flex-col items-center">
+    <div class="flex flex-col items-center md:px-5">
         <div class="flex xl:flex-row flex-col">
-            <div class="flex flex-col lg:min-w-5xl md:min-w-3xl text-left">
+            <div class="flex flex-col lg:min-w-4xl md:min-w-3xl text-left">
                 <div class="flex flex-col gap-1">
                     <div>
                         <p class="max-w-fit text-base text-primary hover:underline hover:decoration-wavy"><a href="/projects" target="_self" rel="noopener noreferrer"><- back</a></p>
@@ -52,13 +52,25 @@ const shortSource = post.data.source.split("https://github.com/")[1];
                             </p>
                         </div>
                         <div class="flex flex-row gap-1">
+                            <p class="text-base text-gray-300">Read Time:</p>
+                            <p class="text-base text-gray-400">{remarkPluginFrontmatter.minutesRead}</p>
+                        </div>
+                        <div class="flex flex-row gap-1">
                             <p class="text-base text-gray-300">Source:</p>
-                            <p class="text-base text-primary hover:underline hover:decoration-wavy"><a href={post.data.source} target="_self" rel="noopener noreferrer">{shortSource}</a></p>
+                            {
+                                post.data.isPublic ?
+                                (
+                                    <p class="text-base text-primary hover:underline hover:decoration-wavy"><a href={post.data.source} target="_self" rel="noopener noreferrer">{shortSource}</a></p>
+                                ) :
+                                (
+                                    <p class="text-base text-gray-500 line-through">{shortSource}</p>
+                                )
+                            }
                         </div>
                     </div>
                 </div>
                 <hr />
-                <div id="content">
+                <div class="break-keep" id="content">
                     <Content />
                 </div>
             </div>

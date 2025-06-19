@@ -15,5 +15,6 @@ export const languagesColorMap = {
     "GLSL": "#5686a5",
     "C3": "#5f47ec",
     "HTML": "#e34c26",
+    "SQL": "#e38c00",
 };
 

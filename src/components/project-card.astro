@@ -9,6 +9,7 @@ const {
         status,
         languages,
         source,
+        isPublic,
     }
 } = Astro.props;
 
@@ -40,7 +41,15 @@ const shortSource = source.split("https://github.com/")[1];
         </div>
         <div class="flex flex-row gap-1">
             <p class="text-base text-gray-300">Source:</p>
-            <p class="text-base text-primary hover:underline hover:decoration-wavy"><a href={source} target="_self" rel="noopener noreferrer">{shortSource}</a></p>
+            {
+                isPublic ?
+                (
+                    <p class="text-base text-primary hover:underline hover:decoration-wavy"><a href={post.data.source} target="_self" rel="noopener noreferrer">{shortSource}</a></p>
+                ) :
+                (
+                    <p class="text-base text-gray-500 line-through">{shortSource}</p>
+                )
+            }
         </div>
     </div>
 </div>

@@ -20,6 +20,8 @@ const projects = defineCollection({
         status: z.enum(["Finished", "In Development", "Abandoned"]),
         languages: z.array(z.string()),
         source: z.string(),
+        updated: z.string(),
+        isPublic: z.boolean(),
     }),
 });
 

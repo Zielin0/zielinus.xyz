@@ -7,7 +7,7 @@ const title = "Projects | zielinus.xyz";
 const description = "A list of projects by zielino";
 const slug = "projects";
 
-const projects = await getCollection("projects");
+const projects = (await getCollection("projects")).sort((a, b) => b.data.updated.localeCompare(a.data.updated));
 ---
 
 <Layout title={title} description={description} slug={slug} focused="projects">
