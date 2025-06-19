@@ -9,7 +9,6 @@ import { remarkReadingTime } from "./src/read_time.ts";
 
 // https://astro.build/config
 export default defineConfig({
-<<<<<<< HEAD
     markdown: {
         remarkPlugins: [remarkReadingTime],
     },
@@ -18,8 +17,4 @@ export default defineConfig({
     },
     integrations: [expressiveCode({ themes: ["kanagawa-wave"] })],
 });
-=======
-  integrations: [expressiveCode({themes: ['dracula']}), mdx()]
-});
 
->>>>>>> master

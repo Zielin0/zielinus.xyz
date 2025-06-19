@@ -14,7 +14,6 @@
     font-display: swap;
 }
 
-<<<<<<< HEAD
 @font-face {
     font-family: "Roboto Mono";
     src: url("../assets/RobotoMono-VariableFont_wght.woff") format("woff");
@@ -23,15 +22,6 @@
 
 html {
     scroll-behavior: smooth;
-=======
-:root {
-  --background-primary: #030303;
-  --background-secondary: #080808;
-  --foreground-primary: #efefef;
-  --foreground-secondary: #e000e4;
-  --selection-background: #b51cb8;
-  --border-color: #262626;
->>>>>>> master
 }
 
 ::-moz-selection {
