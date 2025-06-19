@@ -1,0 +1,15 @@
+---
+const { text, color, isColor } = Astro.props;
+---
+
+<div class="flex flex-row border border-gray-500 rounded-2xl items-center px-2 gap-1">
+    {
+        isColor ?
+        (
+            <span class="w-[10px] h-[10px] rounded-full" style={`background-color: ${color}`}></span>
+        ) :
+        (<></>)
+    }
+    <p class="text-sm">{text}</p>
+</div>
+

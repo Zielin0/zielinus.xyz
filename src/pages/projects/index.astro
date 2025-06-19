@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/layout.astro";
+import ProjectCard from "../../components/project-card.astro"
+
+const title = "Projects | zielinus.xyz";
+const description = "A list of projects by zielino";
+const slug = "projects";
+
+const projects = await getCollection("projects");
+---
+
+<Layout title={title} description={description} slug={slug} focused="projects">
+    <div class="flex flex-col items-center">
+        <div class="text-left xs:w-lg sm:w-md w-[22rem]">
+            <h1 class="text-3xl font-bold">Projects</h1>
+            <p class="text-lg py-1 text-gray-200">A list of projects I've been working on.</p>
+        </div>
+        <div class="flex flex-col gap-4 pt-5">
+        {
+            projects.map(post => (
+                <ProjectCard data={post.data} />
+            ))
+        }
+        </div>
+    </div>
+</Layout>
+

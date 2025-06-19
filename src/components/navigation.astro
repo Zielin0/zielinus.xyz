@@ -1,0 +1,29 @@
+---
+const { focused } = Astro.props;
+---
+
+<div class="h-18 flex flex-row items-center justify-between sm:px-8 px-4 font-roboto text-lg">
+    <div>
+        <a href="/" target="_self" rel="noopener noreferrer">
+            <p class="text-primary font-bold text-4xl hover:underline hover:decoration-wavy hidden sm:block">zielino</p>
+            <p class="text-primary font-bold text-4xl hover:underline hover:decoration-wavy sm:hidden block">z</p>
+        </a>
+    </div>
+    <div>
+        <ul class="flex flex-row gap-5">
+            <li class={`text-primary font-bold hover:underline hover:decoration-wavy text-lg ${focused === "" ? "underline decoration-dashed" : ""}`}>
+                <a href="/" target="_self" rel="noopener noreferrer">about</a>
+            </li>
+            <li class={`text-primary font-bold hover:underline hover:decoration-wavy text-lg ${focused === "projects" ? "underline decoration-dashed" : ""}`}>
+                <a href="/projects" target="_self" rel="noopener noreferrer">projects</a>
+            </li>
+            <li class={`text-primary font-bold hover:underline hover:decoration-wavy text-lg ${focused === "blog" ? "underline decoration-dashed" : ""}`}>
+                <a href="/blog" target="_self" rel="noopener noreferrer">blog</a>
+            </li>
+            <li class="text-gray-500 text-bold text-lg sm:block hidden">
+                support
+            </li>
+        </ul>
+    </div>
+</div>
+

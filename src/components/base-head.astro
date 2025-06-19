@@ -1,0 +1,21 @@
+---
+const { title, description, slug } = Astro.props;
+---
+
+<>
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4269ff" />
+    <meta name="msapplication-TitleColor" content="#4269ff" />
+    <meta name="msapplication-TitleImage" content="https://zielinus.xyz/logo192.png" />
+    <meta name="apple-touch-icon" content="https://zielinus.xyz/logo192.png" />
+    <meta name="description" content={description} />
+    <meta name="title" content={title} />
+    <title>{title}</title>
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`https://zielinus.xyz/${slug}`} />
+    <meta property="og:image" content="https://zielinus.xyz/logo512.png" />
+    <meta property="og:site_name" content="zielinus.xyz" />
+    <meta name="keywords" content="zielino, zielinus, zielin0, Zielin0, ZIELINO, ZIELIN0, Zielino, Zielin, zielin, zielinsus, zielinosus, gernishon" />
+</>
+

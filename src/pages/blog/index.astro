@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/layout.astro";
+import BlogCard from "../../components/blog-card.astro"
+
+const title = "Blog | zielinus.xyz";
+const description = "A blog page";
+const slug = "blog";
+
+const blog = await getCollection("blog");
+---
+
+<Layout title={title} description={description} slug={slug} focused="blog">
+    <div class="flex flex-col items-center">
+        <div class="text-left xs:w-lg sm:w-md w-[22rem]">
+            <h1 class="text-3xl font-bold">Blog</h1>
+            <p class="text-lg py-1 text-gray-200">A list of blog posts I've written.</p>
+        </div>
+        <div class="flex flex-col gap-4 pt-5">
+        {
+            blog.map(post => (
+                <BlogCard data={post.data} />
+            ))
+        }
+        </div>
+    </div>
+</Layout>
+

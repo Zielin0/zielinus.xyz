@@ -1,0 +1,59 @@
+---
+import TocHeading from "./toc-heading.astro";
+
+const { headings } = Astro.props;
+
+function buildHierarchy() {
+    const toc = [];
+    const parentHeadings = new Map();
+    const counters = [];
+
+    if (!headings) {
+        return toc;
+    }
+
+    headings.forEach((h) => {
+        const heading = { ...h, subheadings: [], index: "" };
+        const depth = heading.depth;
+
+        while (counters.length < depth) {
+            counters.push(0);
+        }
+
+        counters[depth-1]++;
+
+        for (let i = depth; i < counters.length; i++) {
+            counters[i] = 0;
+        }
+
+        heading.index = counters.slice(0, depth).filter(n => n > 0).join(".") + ".";
+
+        parentHeadings.set(heading.depth, heading);
+
+        if (heading.depth == 1) {
+            toc.push(heading);
+        } else {
+            const parent = parentHeadings.get(heading.depth - 1);
+            if (parent) {
+                parent.subheadings.push(heading);
+            }
+        }
+    });
+
+    return toc;
+}
+
+const toc = buildHierarchy();
+---
+
+{toc && toc.length > 0 && (
+    <nav>
+        <h3 class="text-xl text-gray-200 font-bold">Table Of Contents</h3>
+        <ul class="text-base">
+            {toc.map((heading) => (
+                <TocHeading heading={heading} />
+            ))}
+        </ul>
+    </nav>
+)}
+

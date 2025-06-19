@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+    --font-roboto: "Roboto Mono", "sans-serif";
+    --color-primary: #4269ff;
+    --color-foreground: #fefefe;
+    --color-background: #161616;
+    --color-card: #1a1a1a;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("../assets/RobotoMono-Italic-VariableFont_wght.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("../assets/RobotoMono-VariableFont_wght.woff") format("woff");
+    font-display: swap;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-moz-selection {
+    color: var(--color-foreground);
+    background: var(--color-primary);
+}
+
+::selection {
+    color: var(--color-foreground);
+    background: var(--color-primary);
+}
+

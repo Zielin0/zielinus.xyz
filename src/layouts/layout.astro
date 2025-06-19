@@ -1,0 +1,30 @@
+---
+import "../styles/global.css"
+import BaseHead from "../components/base-head.astro";
+import Navigation from "../components/navigation.astro";
+import Footer from "../components/footer.astro"
+
+const { title, description, slug, focused } = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, intial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="icon" href="/favicon.svg" type="image/svg" />
+        <BaseHead title={title} description={description} slug={slug} />
+    </head>
+    <body>
+        <div class="min-h-screen bg-background flex flex-col text-foreground">
+            <Navigation focused={focused} />
+            <article class="h-full w-full grow flex flex-col items-center pt-6 font-roboto text-lg">
+                <div class="h-full sm:w-[75%] w-[90%] xl:w-full">
+                    <slot />
+                </div>
+            </article>
+            <Footer />
+        </div>
+    </body>
+</html>
+

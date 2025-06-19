@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/layout.astro";
+
+const title = "Home | zielinus.xyz";
+const description = "Random Cooder";
+const slug = "";
+---
+
+<Layout title={title} description={description} slug={slug} focused="">
+    <div class="w-full flex flex-col items-center sm:px-4 xl:px-25">
+        <div class="text-left">
+        <p>Hello and Welcome.</p>
+        <p>This page is about me and my projects.</p>
+        <p>I would consider myself a programmer. I do like creating new applications, websites, and whatnot.</p>
+        <p>I like to explore things related to programming. I also like other nerdy stuff that are not necessarily related to programming.</p>
+        <p>I do have a blog page at
+        <a href="/blog" target="_self" rel="noopener noreferrer" class="font-bold text-primary hover:underline hover:decoration-wavy">/blog</a>,
+        I won't write blog posts often but it might happen once or twice a year.</p>
+        <p>If you're interested in my projects then I redirect you to the
+            <a href="/projects" target="_self" rel="noopener noreferrer" class="font-bold text-primary hover:underline hover:decoration-wavy">/projects</a>
+            page.
+        </p>
+        <p>If you need to reach me then send me an e-mail at
+            <a href="mailto:me@zielinus.xyz" target="_blank" rel="noopener noreferrer" class="font-bold text-primary hover:underline hover:decoration-wavy">me@zielinus.xyz</a>.
+        </p>
+        <p>Most of my projects are open-source on github at
+            <a href="https://github.com/Zielin0" target="_blank" rel="noopener noreferrer" class="font-bold text-primary hover:underline hover:decoration-wavy">github.com/Zielin0</a>.
+        </p>
+        <!-- support ? -->
+        </div>
+    </div>
+</Layout>
+

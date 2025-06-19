@@ -1,0 +1,17 @@
+---
+const { heading } = Astro.props;
+---
+
+<li>
+    <a href={"#" + heading.slug} target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy">
+        {`${heading.index} ${heading.text}`}
+    </a>
+    {heading.subheadings.length > 0 && (
+        <ul>
+            {heading.subheadings.map((subheading) => (
+                <Astro.self heading={subheading} />
+            ))}
+        </ul>
+    )}
+</li>
+
