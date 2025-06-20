@@ -24,6 +24,12 @@ html {
     scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    :global(html) {
+        scroll-behavior: auto;
+    }
+}
+
 ::-moz-selection {
     color: var(--color-foreground);
     background: var(--color-primary);

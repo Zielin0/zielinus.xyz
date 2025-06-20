@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+
+const { source, link, alt, description, width, height } = Astro.props;
+---
+
+<div class="flex flex-col border border-neutral-600 bg-card rounded-md w-fit p-0 mx-0 my-2">
+    <Image src={source} alt={alt} width={width} height={height} class="rounded-t-md" />
+    <div class="flex flex-row sm:p-2 p-1 border-t border-neutral-600">
+        <p class="text-base text-gray-200">
+            {description}
+            {
+                link !== "" ? (
+                    <a href={link} target="_blank" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy">-^</a>
+                ) : (
+                    <></>
+                )
+            }
+        </p>
+    </div>
+</div>
+

@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/layout.astro";
+import CustomImage from "../components/custom-image.astro";
+import localCatImage from "../assets/404.png";
+
+const title = "Not Found | zielinus.xyz";
+const description = "Error 404 - Page Not Found";
+const slug = "404.html";
+---
+
+<Layout title={title} description={description} slug={slug} focused="404.html">
+    <div class="flex flex-col w-full h-full items-center justify-center xl:pt-5 lg:pt-3 md:pt-2 pt-1 gap-2">
+        <h1 class="lg:text-6xl md:text-5xl text-4xl lg:pb-3 pb-2">Page Not Found</h1>
+
+        <CustomImage source={localCatImage} link="https://http.cat/404" alt="http.cat picture" description="Http Cat 404 Not Found" width={600} height={480} />
+
+        <a href="/" target="_self" rel="noopener noreferrer" class="md:text-3xl text-2xl text-primary hover:underline hover:decoration-wavy lg:pt-2 pt-1">
+            &lt;- go back
+        </a>
+    </div>
+</Layout>
+

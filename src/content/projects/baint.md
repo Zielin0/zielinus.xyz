@@ -240,7 +240,7 @@ an image editor. Something like GIMP but way simpler.
 
 The source code will stay private because I'm ashamed of this code, but on the other note -
 
-I'm not nowhere near popular enough for people to look at my random projects.
+I'm nowhere near popular enough for people to look at my random projects.
 
 :wq!
 

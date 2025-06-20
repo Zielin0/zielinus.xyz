@@ -1,5 +1,5 @@
 ---
-const { title, description, slug } = Astro.props;
+const { title, description, slug, focused } = Astro.props;
 ---
 
 <>
@@ -15,7 +15,7 @@ const { title, description, slug } = Astro.props;
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://zielinus.xyz/${slug}`} />
     <meta property="og:image" content="https://zielinus.xyz/logo512.png" />
-    <meta property="og:site_name" content="zielinus.xyz" />
+    <meta property="og:site_name" content={focused !== "" ? `zielinus.xyz (${focused})` : "zielinus.xyz"} />
     <meta name="keywords" content="zielino, zielinus, zielin0, Zielin0, ZIELINO, ZIELIN0, Zielino, Zielin, zielin, zielinsus, zielinosus, gernishon" />
 </>
 

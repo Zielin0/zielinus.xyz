@@ -75,8 +75,15 @@ const shortSource = post.data.source.split("https://github.com/")[1];
                 </div>
             </div>
             <div class="flex flex-col ml-6">
-                <div class="xl:flex hidden xl:sticky xl:top-0 xl:pt-10">
-                    <TableOfContents headings={headings} />
+                <div class="xl:flex xl:flex-col hidden xl:sticky xl:top-0 xl:pt-10 h-[98vh]">
+                    <div class="grow">
+                        <TableOfContents headings={headings} />
+                    </div>
+                    <div class="b-0 pb-8">
+                        <a href="#top" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy">
+                            ^ scroll up
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

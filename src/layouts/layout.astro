@@ -13,7 +13,7 @@ const { title, description, slug, focused } = Astro.props;
         <meta name="viewport" content="width=device-width, intial-scale=1" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <link rel="icon" href="/favicon.svg" type="image/svg" />
-        <BaseHead title={title} description={description} slug={slug} />
+        <BaseHead title={title} description={description} slug={slug} focused={focused} />
     </head>
     <body>
         <div class="min-h-screen bg-background flex flex-col text-foreground">

@@ -7,6 +7,8 @@ import expressiveCode from 'astro-expressive-code';
 
 import { remarkReadingTime } from "./src/read_time.ts";
 
+import mdx from '@astrojs/mdx';
+
 // https://astro.build/config
 export default defineConfig({
     markdown: {
@@ -15,6 +17,5 @@ export default defineConfig({
     vite: {
         plugins: [tailwindcss()]
     },
-    integrations: [expressiveCode({ themes: ["kanagawa-wave"] })],
+    integrations: [expressiveCode({ themes: ["kanagawa-wave"] }), mdx()],
 });
-
