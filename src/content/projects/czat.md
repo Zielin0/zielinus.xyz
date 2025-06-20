@@ -1,6 +1,6 @@
 ---
 name: "czat"
-description: "A Chat Server + Client written in C "
+description: "A Chat Server + Client written in C"
 status: "Abandoned"
 languages:
     - "C"
