@@ -126,3 +126,9 @@ hr {
     line-height: var(--text-base--line-height);
 }
 
+small {
+    font-size: var(--text-xs);
+    line-height: var(--text-xs--line-height);
+    color: var(--color-neutral-200)
+}
+
