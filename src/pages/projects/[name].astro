@@ -25,9 +25,9 @@ const shortSource = post.data.source.split("https://github.com/")[1];
 ---
 
 <Layout title={title} description={description} slug={slug} focused="projects">
-    <div class="flex flex-col items-center md:px-5">
-        <div class="flex xl:flex-row flex-col">
-            <div class="flex flex-col lg:min-w-4xl md:min-w-3xl text-left">
+    <div class="flex flex-col items-center w-full">
+        <div class="flex flex-row w-full max-w-screen-2xl px-0 lg:px-4 xl:px-8">
+            <div class="flex-1 flex flex-col min-w-0 text-left">
                 <div class="flex flex-col gap-1">
                     <div>
                         <p class="max-w-fit text-base text-primary hover:underline hover:decoration-wavy"><a href="/projects" target="_self" rel="noopener noreferrer"><- back</a></p>
@@ -60,7 +60,7 @@ const shortSource = post.data.source.split("https://github.com/")[1];
                             {
                                 post.data.isPublic ?
                                 (
-                                    <p class="text-base text-primary hover:underline hover:decoration-wavy"><a href={post.data.source} target="_self" rel="noopener noreferrer">{shortSource}</a></p>
+                                    <p class="text-base text-primary hover:underline hover:decoration-wavy"><a href={post.data.source} target="_blank" rel="noopener noreferrer">{shortSource}</a></p>
                                 ) :
                                 (
                                     <p class="text-base text-gray-500 line-through">{shortSource}</p>

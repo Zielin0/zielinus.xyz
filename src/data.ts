@@ -16,5 +16,6 @@ export const languagesColorMap = {
     "C3": "#5f47ec",
     "HTML": "#e34c26",
     "SQL": "#e38c00",
+    "Pascal": "#b0ce4e",
 };
 

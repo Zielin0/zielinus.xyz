@@ -44,7 +44,7 @@ const shortSource = source.split("https://github.com/")[1];
             {
                 isPublic ?
                 (
-                    <p class="text-base text-primary hover:underline hover:decoration-wavy"><a href={post.data.source} target="_self" rel="noopener noreferrer">{shortSource}</a></p>
+                    <p class="text-base text-primary hover:underline hover:decoration-wavy"><a href={source} target="_blank" rel="noopener noreferrer">{shortSource}</a></p>
                 ) :
                 (
                     <p class="text-base text-gray-500 line-through">{shortSource}</p>

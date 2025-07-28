@@ -1,0 +1,25 @@
+{
+    "notifications": [
+        {
+            "title": "Website Update",
+            "description": "Added 3 RSS Feeds (might be too much): https://zielinus.xyz/projects/rss.xml; https://zielinus.xyz/blog/rss.xml; https://zielinus.xyz/notifications.xml; The last one is for general website notifications like this one.",
+            "date": "Sat, 26 Jul 2025 20:47:47 +0200"
+        },
+        {
+            "title": "Website Update",
+            "description": "I finally fixed this weird issue with spacing in projects and blogs, so now I can write it like sane person.",
+            "date": "Sun, 27 Jul 2025 18:23:05 +0200"
+        },
+        {
+            "title": "New Project",
+            "description": "Bogus-Amogus: Simple Virtual Machine and Assembly-Like Language written in Free Pascal; Languages: Pascal, Shell",
+            "date": "Sun, 27 Jul 2025 18:57:45 +0200"
+        },
+        {
+            "title": "New Blog Post",
+            "description": "Writing Down Ideas: Keeping Ideas: A blessing and a curse; Tags: philosophy, creativity; Read Time: 5 min (844 words)",
+            "date": "Mon, 28 Jul 2025 13:11:29 +0200"
+        }
+    ]
+}
+

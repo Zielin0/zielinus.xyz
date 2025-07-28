@@ -13,6 +13,7 @@ import { visit } from "unist-util-visit";
 
 // https://astro.build/config
 export default defineConfig({
+    site: "https://zielinus.xyz",
     markdown: {
         remarkPlugins: [remarkReadingTime],
     },

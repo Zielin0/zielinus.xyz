@@ -8,6 +8,7 @@ const blog = defineCollection({
         description: z.string(),
         slug: z.string(),
         tags: z.array(z.string()),
+        published: z.string(),
         updated: z.string(),
     }),
 });
@@ -20,6 +21,7 @@ const projects = defineCollection({
         status: z.enum(["Finished", "In Development", "Abandoned"]),
         languages: z.array(z.string()),
         source: z.string(),
+        published: z.string(),
         updated: z.string(),
         isPublic: z.boolean(),
     }),
