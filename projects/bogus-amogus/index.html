@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, intial-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link rel="icon" href="/favicon.svg" type="image/svg"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4269ff"><meta name="msapplication-TitleColor" content="#4269ff"><meta name="msapplication-TitleImage" content="https://zielinus.xyz/logo192.png"><meta name="apple-touch-icon" content="https://zielinus.xyz/logo192.png"><meta name="description" content="Simple Virtual Machine and Assembly-Like Language written in Free Pascal"><meta name="title" content="bogus-amogus | zielinus.xyz"><title>bogus-amogus | zielinus.xyz</title><meta property="og:title" content="bogus-amogus | zielinus.xyz"><meta property="og:description" content="Simple Virtual Machine and Assembly-Like Language written in Free Pascal"><meta property="og:type" content="website"><meta property="og:url" content="https://zielinus.xyz/projects/bogus-amogus"><meta property="og:image" content="https://zielinus.xyz/logo512.png"><meta property="og:site_name" content="zielinus.xyz (projects)"><meta name="keywords" content="zielino, zielinus, zielin0, Zielin0, ZIELINO, ZIELIN0, Zielino, Zielin, zielin, zielinsus, zielinosus, gernishon"><link rel="stylesheet" href="/_astro/_slug_.DbevgHar.css">
+<link rel="stylesheet" href="/_astro/_slug_.DozTc3SP.css"></head> <body> <div class="min-h-screen bg-background flex flex-col text-foreground"> <div id="top" class="h-18 flex flex-row items-center justify-between sm:px-8 px-4 font-roboto text-lg"> <div> <a href="/" target="_self" rel="noopener noreferrer"> <p class="text-primary font-bold text-4xl hover:underline hover:decoration-wavy hidden sm:block">zielino</p> <p class="text-primary font-bold text-4xl hover:underline hover:decoration-wavy sm:hidden block">z</p> </a> </div> <div> <ul class="flex flex-row gap-5"> <li class="text-primary font-bold hover:underline hover:decoration-wavy text-lg "> <a href="/" target="_self" rel="noopener noreferrer">about</a> </li> <li class="text-primary font-bold hover:underline hover:decoration-wavy text-lg underline decoration-dashed"> <a href="/projects" target="_self" rel="noopener noreferrer">projects</a> </li> <li class="text-primary font-bold hover:underline hover:decoration-wavy text-lg "> <a href="/blog" target="_self" rel="noopener noreferrer">blog</a> </li> <li class="text-gray-500 text-bold text-lg sm:block hidden">
+support
+</li> </ul> </div> </div> <article class="h-full w-full grow flex flex-col items-center pt-6 font-roboto text-lg"> <div class="h-full sm:w-[75%] w-[90%] xl:w-full">  <div class="flex flex-col items-center w-full"> <div class="flex flex-row w-full max-w-screen-2xl px-0 lg:px-4 xl:px-8"> <div class="flex-1 flex flex-col min-w-0 text-left"> <div class="flex flex-col gap-1"> <div> <p class="max-w-fit text-base text-primary hover:underline hover:decoration-wavy"><a href="/projects" target="_self" rel="noopener noreferrer"><- back</a></p> <h1 class="text-5xl font-bold">bogus-amogus</h1> <p class="text-xl text-gray-200 pt-1">Simple Virtual Machine and Assembly-Like Language written in Free Pascal</p> </div> <div class="flex flex-col gap-1 pt-2"> <div class="flex flex-row gap-1"> <p class="text-base text-gray-300">Status:</p> <p class="text-base"> <div class="flex flex-row border border-gray-500 rounded-2xl items-center px-2 gap-1"> <span class="w-[10px] h-[10px] rounded-full" style="background-color: #2b7fff"></span> <p class="text-sm">In Development</p> </div> </p> </div> <div class="flex flex-row gap-1"> <p class="text-base text-gray-300">Languages:</p> <p class="text-base flex flex-row gap-1"> <div class="flex flex-row border border-gray-500 rounded-2xl items-center px-2 gap-1"> <span class="w-[10px] h-[10px] rounded-full" style="background-color: #b0ce4e"></span> <p class="text-sm">Pascal</p> </div><div class="flex flex-row border border-gray-500 rounded-2xl items-center px-2 gap-1"> <span class="w-[10px] h-[10px] rounded-full" style="background-color: #89e051"></span> <p class="text-sm">Shell</p> </div> </p> </div> <div class="flex flex-row gap-1"> <p class="text-base text-gray-300">Read Time:</p> <p class="text-base text-gray-400">4 min read (604 words)</p> </div> <div class="flex flex-row gap-1"> <p class="text-base text-gray-300">Source:</p> <p class="text-base text-primary hover:underline hover:decoration-wavy"><a href="https://github.com/Zielin0/bogus-amogus" target="_blank" rel="noopener noreferrer">Zielin0/bogus-amogus</a></p> </div> </div> </div> <hr> <div class="break-keep" id="content"> <p>Bogus-Amogus is divided into 2 parts:</p>
+<ul>
+<li>Bogus (<code>bogus.pas</code>) - <em>The Bogus Virtual Machine</em> - A very simple Virtual Machine which runs <code>.bogus</code> “executables”.</li>
+<li>Amogus (<code>amogus.pas</code>) - <em>The Amogus Compiler</em> - A very simple compiler which parses <code>.amogus</code> Assembly-Like language and compiles it into a <code>.bogus</code> “executable”.</li>
+</ul>
+<h1 id="intro">Intro</h1>
+<p>I decided to make this project after I was “burned out” and wanted to do anything. So I decided on a simple virtual machine.
+I have never made anything like that before, the parses I tried to make always ended abandoned and half-working or not working at all.</p>
+<h1 id="the-project">The Project</h1>
+<p>Like I described above it was divided into two parts. A compiler and a Virtual Machine.</p>
+<p>But first let’s explore what a compiler and what a virtual machine is.</p>
+<h2 id="compiler">Compiler</h2>
+<p>Compiler is a program which parses a programming language and translates that to machine code.
+That machine code can be anything, it can even be a second programming language.</p>
+<h2 id="virtual-machine">Virtual Machine</h2>
+<p>There are two main types of virtual machines:</p>
+<ul>
+<li>System virtual machine - This one is very advanced and basically simulates a whole computer</li>
+<li>Process virtual machine - This one is for executing programs in a “platform-independent” environment.</li>
+</ul>
+<h2 id="amogus">Amogus</h2>
+<p>I made <em>The Amogus Compiler</em> first. It compiled the <code>.amogus</code> source files into <code>.bogus</code> “executables”.</p>
+<p>The <code>amogus</code> language had only <em><strong>4</strong></em> instructions available:</p>
+<ul>
+<li><code>load</code> - loads a number into a register</li>
+<li><code>add</code> - adds numbers from two registers and saves it into the first of them</li>
+<li><code>sub</code> - subtracts numbers from two registers and saves it into the first of them</li>
+<li><code>stop</code> - ends the program</li>
+</ul>
+<p>The code was compiled into <code>.bogus</code> “executable” which was just raw bytes without any specific format.
+Each function was saves as <em><strong>3</strong></em> bytes. The first one is for the instruction ID and the rest of them are for values or registers.</p>
+<h2 id="bogus">Bogus</h2>
+<p><em>The Bogus Virtual Machine</em> was made after <em>The Amogus Compiler</em>. It executed the <code>.bogus</code> “executable”.</p>
+<p>The machine also had <em><strong>4</strong></em> byte-sized registers and <em><strong>512</strong></em> bytes of “memory”.
+Since there are no memory stack operations and any functionality whatsoever, the memory is only used for loading the “executable”.</p>
+<p><em>The Bogus Virtual Machine</em> went step by step through instructions and printed the machine state every time.</p>
+<h1 id="the-fatal-flaw">The Fatal Flaw</h1>
+<p>So after making <em>The Amogus Compiler</em> and <em>The Bogus Virtual Machine</em> I wanted to extend the project.
+I wanted to add more instructions and stuff like that. While doing that I realized that it is impossible to do that productively.
+I made a fatal mistake in <em>The Amogus Compiler</em>. Instead of creating a parser like a sane person, I made it like I only expected those <em><strong>4</strong></em> instructions.
+I could have made something like <code>ExpectInstruction</code> and <code>ExpectRegister</code> or <code>ExpectNumber</code> which would check the next “token” for the requirement.
+Instead of that I parsed it like a retard in one go.</p>
+<p>It is still possible to fix that issue, it won’t be very simple though. The whole parser needs a rewrite.</p>
+<h1 id="whats-next">What’s Next</h1>
+<p>I don’t really know if I still want to work on this project. It was a cool experiment and perhaps it should stay like that.
+I will either change the status of this article to <strong>Abandoned</strong> or I will come back one day and do this rewrite.
+For now it will stay in this limbo state.</p>
+<h1 id="what-i-learned">What I Learned</h1>
+<p>Mostly just how to make a virtual machine. But this is not useless. Making virtual machines is cool. I might come back to this concept in another project one day.
+I also learned some more <em>Pascal</em> with which I had little experience before. It’s a cool language, and it compiles fast.
+I also successfully made a parser and a compiler. Which has never happened before. Doesn’t matter it’s bad.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>I learned some stuff, this was a cool experiment.</p>
+<p>The source code is available at <a href="https://github.com/Zielin0/bogus-amogus">github.com/Zielin0/bogus-amogus</a>.</p>
+<p>:wq!</p>
+<p>- ziel</p> </div> </div> <div class="flex flex-col ml-6"> <div class="xl:flex xl:flex-col hidden xl:sticky xl:top-0 xl:pt-10 h-[98vh]"> <div class="grow"> <nav><h3 class="text-xl text-gray-200 font-bold">Table Of Contents</h3><ul class="text-base"><li> <a href="#intro" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 1. Intro </a>  </li><li> <a href="#the-project" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 2. The Project </a> <ul> <li> <a href="#compiler" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 2.1. Compiler </a>  </li><li> <a href="#virtual-machine" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 2.2. Virtual Machine </a>  </li><li> <a href="#amogus" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 2.3. Amogus </a>  </li><li> <a href="#bogus" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 2.4. Bogus </a>  </li> </ul> </li><li> <a href="#the-fatal-flaw" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 3. The Fatal Flaw </a>  </li><li> <a href="#whats-next" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 4. What’s Next </a>  </li><li> <a href="#what-i-learned" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 5. What I Learned </a>  </li><li> <a href="#conclusion" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy"> 6. Conclusion </a>  </li></ul></nav> </div> <div class="b-0 pb-8"> <a href="#top" target="_self" rel="noopener noreferrer" class="text-base text-primary hover:underline hover:decoration-wavy">
+^ scroll up
+</a> </div> </div> </div> </div> </div>  </div> </article> <footer class="flex items-center flex-col pb-3 pt-6 text-sm font-bold font-roboto">
+zielino&nbsp;&copy;&nbsp;2025 </footer> </div> </body></html>
